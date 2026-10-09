@@ -1,0 +1,279 @@
+/* Google 자격 증명은 실행 중 메모리에만 두고 게임에는 단기 ID 토큰만 전달한다. */
+(() => {
+  "use strict";
+  const config = {"apiKey": "AIzaSyCyYuymRFCZ2nKFHHGFzPHGdbkiD5wwEHQ", "authDomain": "com-hyunbbai-frd.firebaseapp.com", "projectId": "com-hyunbbai-frd", "storageBucket": "com-hyunbbai-frd.firebasestorage.app", "messagingSenderId": "506040439887", "appId": "1:506040439887:web:f158d36708fb76b4c3c63a", "measurementId": "G-2C73CJQD30"};
+  let auth,
+    sdk,
+    ready = false,
+    generation = 0,
+    busy = false;
+  let operation = null,
+    clearing = null,
+    signOutRequested = false;
+  let deletion = null,
+    deletedUid = "";
+  const errorCode = (error) => {
+    if (
+      ["auth/popup-closed-by-user", "auth/cancelled-popup-request"].includes(
+        error?.code,
+      )
+    )
+      return "cancelled";
+    if (["auth/network-request-failed", "auth/timeout"].includes(error?.code))
+      return "network";
+    if (
+      [
+        "auth/unauthorized-domain",
+        "auth/operation-not-allowed",
+        "auth/invalid-api-key",
+        "auth/popup-blocked",
+      ].includes(error?.code)
+    )
+      return "not_configured";
+    if (error?.code === "auth/user-mismatch") return "user_mismatch";
+    if (error?.code === "auth/requires-recent-login")
+      return "recent_login_required";
+    if (
+      [
+        "auth/no-current-user",
+        "auth/user-token-expired",
+        "auth/user-not-found",
+        "auth/user-disabled",
+      ].includes(error?.code)
+    )
+      return "signed_out";
+    return "auth_failed";
+  };
+  const reply = (callback, requestId, value) =>
+    callback(JSON.stringify({ ...value, request_id: requestId }));
+  const sameUser = (user) => !!user && auth?.currentUser?.uid === user.uid;
+  const validUid = (uid) =>
+    typeof uid === "string" && uid.length > 0 && uid.length <= 128;
+  const deletionResult = (uid) => ({
+    ok: true,
+    uid,
+    project_id: config.projectId,
+    deleted: true,
+  });
+  async function deliver(user, callback, epoch, requestId, refresh = false) {
+    if (!sameUser(user)) throw { code: "auth/no-current-user" };
+    const idToken = await user.getIdToken(refresh);
+    if (epoch !== generation) return;
+    if (!sameUser(user)) throw { code: "auth/no-current-user" };
+    reply(callback, requestId, {
+      ok: true,
+      uid: user.uid,
+      id_token: idToken,
+      display_name: user.displayName || "",
+      email: user.email || "",
+      project_id: config.projectId,
+      play_games_linked: user.providerData.some(
+        (provider) => provider.providerId === "playgames.google.com",
+      ),
+    });
+  }
+  globalThis.FirebaseAuth = {
+    isAvailable() {
+      return ready && !clearing && !busy;
+    },
+    googleSignIn(requestId, callback) {
+      if (!ready || busy || clearing) {
+        reply(callback, requestId, { ok: false, error: "not_configured" });
+        return;
+      }
+      deletedUid = "";
+      busy = true;
+      signOutRequested = false;
+      const epoch = ++generation;
+      const provider = new sdk.GoogleAuthProvider();
+      provider.setCustomParameters({ prompt: "select_account" });
+      // popup은 실제 입력 이벤트에서 즉시 연다. 로그아웃 정리가 끝나기 전에는 새 요청을 받지 않는다.
+      operation = sdk
+        .signInWithPopup(auth, provider, sdk.browserPopupRedirectResolver)
+        .then(async (result) => {
+          if (epoch !== generation) {
+            await sdk.signOut(auth);
+            return;
+          }
+          await deliver(result.user, callback, epoch, requestId);
+        })
+        .catch((error) => {
+          if (epoch === generation)
+            reply(callback, requestId, { ok: false, error: errorCode(error) });
+        })
+        .finally(() => {
+          busy = false;
+        });
+    },
+    reauthenticate(requestId, expectedUid, callback) {
+      if (!ready) {
+        reply(callback, requestId, { ok: false, error: "not_configured" });
+        return;
+      }
+      if (busy || clearing) {
+        reply(callback, requestId, { ok: false, error: "busy" });
+        return;
+      }
+      const user = auth.currentUser;
+      if (!user) {
+        reply(callback, requestId, { ok: false, error: "signed_out" });
+        return;
+      }
+      if (!validUid(expectedUid) || user.uid !== expectedUid) {
+        reply(callback, requestId, { ok: false, error: "user_mismatch" });
+        return;
+      }
+      if (
+        !user.providerData.some(
+          (provider) => provider.providerId === "google.com",
+        )
+      ) {
+        reply(callback, requestId, { ok: false, error: "auth_failed" });
+        return;
+      }
+      busy = true;
+      const epoch = ++generation;
+      const provider = new sdk.GoogleAuthProvider();
+      provider.setCustomParameters({ prompt: "select_account" });
+      // 확인 버튼의 입력 이벤트 안에서 popup을 즉시 연다. signIn으로 계정을 바꾸지 않는다.
+      operation = sdk
+        .reauthenticateWithPopup(
+          user,
+          provider,
+          sdk.browserPopupRedirectResolver,
+        )
+        .then(async (result) => {
+          if (epoch !== generation) {
+            await sdk.signOut(auth);
+            return;
+          }
+          if (result.user.uid !== expectedUid || !sameUser(user))
+            throw { code: "auth/user-mismatch" };
+          await deliver(user, callback, epoch, requestId, true);
+        })
+        .catch((error) => {
+          if (epoch === generation)
+            reply(callback, requestId, { ok: false, error: errorCode(error) });
+        })
+        .finally(() => {
+          busy = false;
+        });
+    },
+    deleteAccount(requestId, expectedUid, callback) {
+      if (!validUid(expectedUid)) {
+        reply(callback, requestId, { ok: false, error: "user_mismatch" });
+        return;
+      }
+      if (deletion) {
+        if (deletion.uid !== expectedUid) {
+          reply(callback, requestId, { ok: false, error: "busy" });
+          return;
+        }
+        // HTTP 응답 대기 시간이 지나도 이미 보낸 삭제를 중복 실행하지 않는다.
+        deletion.waiters.push({ callback, requestId });
+        return;
+      }
+      if (deletedUid === expectedUid) {
+        reply(callback, requestId, deletionResult(expectedUid));
+        return;
+      }
+      if (!ready) {
+        reply(callback, requestId, { ok: false, error: "not_configured" });
+        return;
+      }
+      if (busy || clearing) {
+        reply(callback, requestId, { ok: false, error: "busy" });
+        return;
+      }
+      const user = auth.currentUser;
+      if (!user) {
+        reply(callback, requestId, { ok: false, error: "signed_out" });
+        return;
+      }
+      if (user.uid !== expectedUid) {
+        reply(callback, requestId, { ok: false, error: "user_mismatch" });
+        return;
+      }
+      busy = true;
+      const current = { uid: expectedUid, waiters: [{ callback, requestId }] };
+      deletion = current;
+      // deleteUser는 성공 시 SDK 세션도 로그아웃한다. 시작 후 signOut으로 취소할 수 없다.
+      let task;
+      try {
+        task = sdk.deleteUser(user);
+      } catch (error) {
+        task = Promise.reject(error);
+      }
+      operation = Promise.resolve(task)
+        .then(
+          () => {
+            deletedUid = expectedUid;
+            return deletionResult(expectedUid);
+          },
+          (error) => ({ ok: false, error: errorCode(error) }),
+        )
+        .then((result) => {
+          deletion = null;
+          busy = false;
+          for (const waiter of current.waiters) {
+            try {
+              reply(waiter.callback, waiter.requestId, result);
+            } catch (_) {
+              /* 종료된 Godot 콜백이 다음 대기자의 결과를 막지 않게 한다. */
+            }
+          }
+        });
+    },
+    requestToken(requestId, callback) {
+      const epoch = generation;
+      if (!ready || clearing || busy) {
+        reply(callback, requestId, { ok: false, error: "not_configured" });
+        return;
+      }
+      deliver(auth.currentUser, callback, epoch, requestId).catch((error) => {
+        if (epoch === generation)
+          reply(callback, requestId, { ok: false, error: errorCode(error) });
+      });
+    },
+    signOut() {
+      generation++;
+      signOutRequested = true;
+      if (!auth || clearing) return;
+      const previous = operation;
+      // 늦게 완료된 popup이 Firebase currentUser를 되살리는 경우도 마지막에 다시 정리한다.
+      clearing = (async () => {
+        await sdk.signOut(auth);
+        if (previous) await previous;
+        await sdk.signOut(auth);
+      })()
+        .catch(() => {
+          ready = false;
+        })
+        .finally(() => {
+          clearing = null;
+          operation = null;
+          busy = false;
+        });
+    },
+  };
+  if (!config) return;
+  // 버전을 고정하고 엔진 로딩과 병렬로 준비한다. 설정이 없는 개발 빌드는 SDK를 받지 않는다.
+  Promise.all([
+    import("https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js"),
+    import("https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js"),
+  ])
+    .then(async ([appSdk, authSdk]) => {
+      sdk = authSdk;
+      // 기본 getAuth()는 기존 브라우저 저장을 조회하므로 처음부터 메모리만 선택한다.
+      // popup resolver는 버튼 요청에서만 전달해 초기 redirect 세션 복원도 시작하지 않는다.
+      auth = sdk.initializeAuth(appSdk.initializeApp(config, "guild-account"), {
+        persistence: sdk.inMemoryPersistence,
+      });
+      await auth.authStateReady();
+      if (signOutRequested) await sdk.signOut(auth);
+      ready = true;
+    })
+    .catch(() => {
+      ready = false;
+    });
+})();
