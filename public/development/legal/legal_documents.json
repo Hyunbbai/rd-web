@@ -278,10 +278,10 @@
             ]
           },
           {
-            "heading": "3. 기기에 저장되는 정보와 국가 설정",
+            "heading": "3. 기기 저장과 통화 표시",
             "paragraphs": [
-              "게스트 진행 정보와 계정의 로컬 저장 사본은 기기 파일 또는 웹 브라우저의 IndexedDB에 저장됩니다. 언어, 선택한 국가, 음량 등 기기 설정과 약관 동의 버전 및 시각은 기기에 저장하며 게임의 클라우드 진행 정보에 포함하지 않습니다.",
-              "Google Play 가격 조회를 지원하는 환경에서는 Play Billing이 반환하는 가격과 국가 정보를 현재 실행 중인 세션에서 사용합니다. 국가 설정을 위해 별도 외부 IP 조회 서비스를 호출하지 않습니다. 이용자가 선택한 국가는 법적 관할이나 광고 동의 필요 여부를 결정하는 기준이 아닙니다. 이와 별개로 광고 SDK는 IP 주소에서 대략적인 위치를 추정할 수 있습니다.",
+              "게스트 진행 정보와 계정의 로컬 저장 사본은 기기 파일 또는 웹 브라우저의 IndexedDB에 저장됩니다. 언어, 음량 등 기기 설정과 약관 동의 버전 및 시각은 기기에 저장하며 게임의 클라우드 진행 정보에 포함하지 않습니다.",
+              "Google Play 가격 조회를 지원하는 환경에서는 Play Billing이 반환하는 가격과 국가 정보를 현재 실행 중인 세션에서 사용합니다. 미리보기 통화는 기기의 지역 설정을 참고하며 별도 외부 IP 조회 서비스를 호출하지 않습니다. 기기의 지역 설정은 법적 관할이나 광고 동의 필요 여부를 결정하는 기준이 아닙니다. 이와 별개로 광고 SDK는 IP 주소에서 대략적인 위치를 추정할 수 있습니다.",
               "UMP는 광고 관련 개인정보 선택을 기기에 보관하며, 광고 요청에 해당 동의 신호가 전달될 수 있습니다. 게임은 보상 관리와 중복 지급 방지를 위해 보상형 광고의 지급 내역과 대기 시간 정보를 진행 정보에 저장하며, 계정의 진행 정보는 기존 클라우드 저장 기능으로 동기화될 수 있습니다. 이와 별개로 Android 광고 연결 기능은 원래 값을 직접 드러내지 않는 해시 처리된 저장 범위 식별자, 무작위 요청 식별자 및 보상 획득 시각으로 구성된 미처리 보상 수신 기록을 기기에만 보관합니다. 이 기록에는 이메일이나 원본 Firebase UID를 넣지 않으며, 해당 값을 광고 보상 검증 정보로 전송하지 않습니다. 이 기록은 SDK 콜백의 수신 기록이며 서버 측 보상 검증 결과가 아닙니다.",
               "브라우저 사이트 데이터나 앱 데이터를 지우면 로컬 저장 정보도 지워질 수 있습니다. 저장을 차단하면 진행 유지나 설정 저장이 정상적으로 동작하지 않을 수 있습니다."
             ]
@@ -369,10 +369,10 @@
             ]
           },
           {
-            "heading": "3. Device storage and country settings",
+            "heading": "3. Device storage and displayed currency",
             "paragraphs": [
-              "Guest progress and local account-save copies are stored in device files or the browser’s IndexedDB. Language, selected country, volume and other device settings, together with the version and time of terms acceptance, are stored on the device and are not included in the game’s cloud progress.",
-              "On platforms supporting Google Play price queries, price and country information returned by Play Billing is used for the current session. The game does not call a separate external IP-lookup service to set your country. Your selected country does not establish your legal jurisdiction or determine advertising-consent requirements. Separately, the advertising SDK may infer general location from an IP address.",
+              "Guest progress and local account-save copies are stored in device files or the browser’s IndexedDB. Language, volume and other device settings, together with the version and time of terms acceptance, are stored on the device and are not included in the game’s cloud progress.",
+              "On platforms supporting Google Play price queries, price and country information returned by Play Billing is used for the current session. Preview currency uses the device locale without calling a separate external IP-lookup service. The device locale does not establish your legal jurisdiction or determine advertising-consent requirements. Separately, the advertising SDK may infer general location from an IP address.",
               "UMP keeps advertising privacy choices on the device, and advertising requests can carry the corresponding consent signals. The game stores rewarded-ad grant history and waiting-period information with progress to manage rewards and avoid duplicate grants; an account’s progress can be synchronized through the existing cloud-save feature. Separately, the Android advertising bridge keeps a pending reward receipt only on the device, using an opaque hashed save-scope identifier, a random request identifier and the time the reward was earned. It does not put your email or raw Firebase UID in that receipt or send those values as advertising reward-verification data. This receipt records an SDK callback; it is not server-side reward verification.",
               "Clearing browser site data or app data may remove local saves. Blocking storage may prevent progress and settings from being retained correctly."
             ]
@@ -460,10 +460,10 @@
             ]
           },
           {
-            "heading": "3. 设备存储与国家设置",
+            "heading": "3. 设备存储与货币显示",
             "paragraphs": [
-              "游客进度和账号存档的本地副本保存在设备文件或浏览器的 IndexedDB 中。语言、所选国家、音量等设备设置，以及同意条款的版本和时间，保存在设备上，不包含在游戏的云端进度中。",
-              "在支持 Google Play 价格查询的平台上，Play Billing 返回的价格和国家信息仅用于当前运行会话。游戏不会为设置国家而调用单独的外部 IP 查询服务。您选择的国家不确定您的法律管辖地，也不决定广告同意要求。与此独立，广告 SDK 可能根据 IP 地址估计大致位置。",
+              "游客进度和账号存档的本地副本保存在设备文件或浏览器的 IndexedDB 中。语言、音量等设备设置，以及同意条款的版本和时间，保存在设备上，不包含在游戏的云端进度中。",
+              "在支持 Google Play 价格查询的平台上，Play Billing 返回的价格和国家信息仅用于当前运行会话。预览货币参考设备的地区设置，不调用单独的外部 IP 查询服务。设备的地区设置不确定您的法律管辖地，也不决定广告同意要求。与此独立，广告 SDK 可能根据 IP 地址估计大致位置。",
               "UMP 在设备上保存广告隐私选择，广告请求可以携带相应的同意信号。游戏将激励广告奖励发放记录和等待时间信息保存在进度中，用于管理奖励及防止重复发放；账号进度可以通过现有云存档功能同步。与此独立，Android 广告桥接功能仅在设备上保存待处理的奖励回执，其中包含不直接显示原始值的哈希存档范围标识符、随机请求标识符及奖励获得时间。回执不包含您的电子邮箱或原始 Firebase UID，也不将这些值作为广告奖励验证数据发送。该回执记录 SDK 回调，并非服务器端奖励验证结果。",
               "清除浏览器网站数据或应用数据可能同时删除本地存档。禁止存储可能导致进度或设置无法正常保留。"
             ]
@@ -551,10 +551,10 @@
             ]
           },
           {
-            "heading": "3. 端末内の保存と国設定",
+            "heading": "3. 端末内の保存と通貨表示",
             "paragraphs": [
-              "ゲストの進行状況とアカウントのローカル保存コピーは、端末のファイルまたはブラウザーの IndexedDB に保存します。言語、選択した国、音量などの端末設定と、利用規約に同意したバージョン・時刻は端末に保存し、ゲームのクラウド上の進行状況には含めません。",
-              "Google Play の価格照会に対応する環境では、Play Billing が返す価格と国の情報を現在のセッションで使用します。国設定のために別の外部 IP 照会サービスを呼び出すことはありません。選択した国によって法的な管轄や広告への同意要件が決まるわけではありません。これとは別に、広告 SDK が IP アドレスからおおよその位置を推定する場合があります。",
+              "ゲストの進行状況とアカウントのローカル保存コピーは、端末のファイルまたはブラウザーの IndexedDB に保存します。言語、音量などの端末設定と、利用規約に同意したバージョン・時刻は端末に保存し、ゲームのクラウド上の進行状況には含めません。",
+              "Google Play の価格照会に対応する環境では、Play Billing が返す価格と国の情報を現在のセッションで使用します。プレビューの通貨は端末の地域設定を参考にし、別の外部 IP 照会サービスを呼び出しません。端末の地域設定によって法的な管轄や広告への同意要件が決まるわけではありません。これとは別に、広告 SDK が IP アドレスからおおよその位置を推定する場合があります。",
               "UMP は広告に関するプライバシーの選択を端末に保存し、広告リクエストには対応する同意情報が含まれる場合があります。ゲームは報酬の管理と重複付与の防止のため、リワード広告の付与履歴と待機時間の情報を進行情報に保存し、アカウントの進行情報は既存のクラウド保存機能で同期される場合があります。これとは別に、Android の広告連携機能は、元の値を直接示さないハッシュ化した保存範囲の識別子、ランダムなリクエスト識別子、報酬獲得時刻を含む未処理の報酬受信記録を端末内にのみ保存します。この記録にはメールアドレスや元の Firebase UID を含めず、それらの値を広告報酬の検証データとして送信しません。この記録は SDK コールバックの受信記録であり、サーバー側の報酬検証結果ではありません。",
               "ブラウザーのサイトデータやアプリデータを消去すると、ローカル保存情報も失われる場合があります。保存を拒否すると、進行状況や設定を正常に保持できないことがあります。"
             ]
