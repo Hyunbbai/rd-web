@@ -1,4 +1,4 @@
-/* Google 자격 증명은 실행 중 메모리에만 두고 게임에는 단기 ID 토큰만 전달한다. */
+/* 로그인 지속·갱신은 Firebase SDK가 소유하고 게임에는 단기 ID 토큰만 전달한다. */
 (() => {
   "use strict";
   const config = null;
@@ -12,6 +12,8 @@
     signOutRequested = false;
   let deletion = null,
     deletedUid = "";
+  let initialization = Promise.resolve(),
+    restoration = null;
   const errorCode = (error) => {
     if (
       ["auth/popup-closed-by-user", "auth/cancelled-popup-request"].includes(
@@ -73,8 +75,58 @@
     });
   }
   globalThis.FirebaseAuth = {
+    getProjectId() {
+      return typeof config?.projectId === "string" ? config.projectId : "";
+    },
     isAvailable() {
       return ready && !clearing && !busy;
+    },
+    restoreSession(requestId, callback) {
+      if (busy || clearing) {
+        reply(callback, requestId, { ok: false, error: "busy" });
+        return;
+      }
+      busy = true;
+      const epoch = ++generation;
+      const current = { requestId, epoch };
+      restoration = current;
+      let restoringUser = null;
+      // 엔진보다 SDK 준비가 늦어져도 저장된 인증 상태를 읽은 뒤 한 번만 복구한다.
+      operation = (async () => {
+        await initialization;
+        if (epoch !== generation) return;
+        if (!ready) throw { code: "auth/operation-not-allowed" };
+        const user = auth.currentUser;
+        restoringUser = user;
+        if (
+          !user || user.isAnonymous ||
+          !user.providerData.some((provider) => provider.providerId === "google.com")
+        ) throw { code: "auth/no-current-user" };
+        // 저장된 UID만 신뢰하지 않고 새 토큰을 발급받아 서버 접근을 검증한다.
+        await deliver(user, callback, epoch, requestId, true);
+      })()
+        .catch(async (error) => {
+          if (epoch !== generation) return;
+          const code = errorCode(error);
+          // 일시적인 연결 실패는 다음 실행의 자동 로그인 정보를 없애지 않는다.
+          if (code === "signed_out" && sameUser(restoringUser))
+            await sdk.signOut(auth).catch(() => { ready = false; });
+          if (epoch === generation)
+            reply(callback, requestId, { ok: false, error: code });
+        })
+        .finally(() => {
+          if (restoration === current) {
+            restoration = null;
+            busy = false;
+          }
+        });
+    },
+    cancelRestore(requestId) {
+      if (!restoration || restoration.requestId !== requestId) return;
+      generation++;
+      restoration = null;
+      operation = null;
+      busy = false;
     },
     googleSignIn(requestId, callback) {
       if (!ready || busy || clearing) {
@@ -258,16 +310,16 @@
   };
   if (!config) return;
   // 버전을 고정하고 엔진 로딩과 병렬로 준비한다. 설정이 없는 개발 빌드는 SDK를 받지 않는다.
-  Promise.all([
+  initialization = Promise.all([
     import("https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js"),
     import("https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js"),
   ])
     .then(async ([appSdk, authSdk]) => {
       sdk = authSdk;
-      // 기본 getAuth()는 기존 브라우저 저장을 조회하므로 처음부터 메모리만 선택한다.
-      // popup resolver는 버튼 요청에서만 전달해 초기 redirect 세션 복원도 시작하지 않는다.
+      // 같은 브라우저·사이트의 로그인은 SDK 저장소에서 복원한다. 자체 토큰 파일은 만들지 않는다.
+      // 저장소가 차단된 환경은 메모리로 동작하며 popup은 명시적 로그인에서만 연다.
       auth = sdk.initializeAuth(appSdk.initializeApp(config, "guild-account"), {
-        persistence: sdk.inMemoryPersistence,
+        persistence: [sdk.indexedDBLocalPersistence, sdk.browserLocalPersistence, sdk.inMemoryPersistence],
       });
       await auth.authStateReady();
       if (signOutRequested) await sdk.signOut(auth);

@@ -464,7 +464,11 @@
         "認証を完了できませんでした。しばらくしてから再試行してください。",
     },
   };
-  const PROJECT_ID = "com-hyunbbai-frd";
+  // 로그인 SDK에 주입된 배포 설정을 사용하며 응답의 프로젝트로 대상을 바꾸지 않는다.
+  const configuredProject = globalThis.FirebaseAuth?.getProjectId?.();
+  const PROJECT_ID = typeof configuredProject === "string" &&
+    /^[a-z][a-z0-9-]{4,28}[a-z0-9]$/.test(configuredProject)
+    ? configuredProject : "";
   const API_ROOT = "https://firestore.googleapis.com/v1/";
   const RESPONSE_LIMIT = 1048576;
   const PROFILE_LIMIT = 400000;
@@ -614,7 +618,7 @@
   }
 
   function validateIdentity(value, expectedUid = "") {
-    if (!isObject(value) || value.project_id !== PROJECT_ID)
+    if (!PROJECT_ID || !isObject(value) || value.project_id !== PROJECT_ID)
       throw failure("not_configured");
     if (
       typeof value.uid !== "string" ||
