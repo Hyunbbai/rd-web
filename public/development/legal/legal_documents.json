@@ -1,0 +1,627 @@
+{
+  "schema": 1,
+  "version": "2026-10-09.2",
+  "effective_date": "2026-10-09",
+  "documents": {
+    "terms": {
+      "ko": {
+        "title": "Fantasy Random Defense 이용약관",
+        "sections": [
+          {
+            "heading": "1. 운영자와 적용 범위",
+            "paragraphs": [
+              "이 약관은 hyunbbai(이하 “운영자”)가 제공하는 Fantasy Random Defense의 이용에 적용됩니다. 문의: hyunbae402@gmail.com. 시행일: 2026년 10월 9일.",
+              "이용자는 게임에서 약관을 확인하고 동의한 뒤 서비스를 이용할 수 있습니다. 개인정보 처리에 관한 사항은 별도의 개인정보 처리방침에서 안내합니다."
+            ]
+          },
+          {
+            "heading": "2. 게스트와 계정 이용",
+            "paragraphs": [
+              "게스트로 플레이하거나 Google 로그인을 통해 계정과 클라우드 저장을 이용할 수 있습니다. 지원되는 환경에서는 Google Play Games를 기존 게임 계정에 선택적으로 연결할 수 있습니다. 다른 게임 계정의 진행 정보를 자동으로 합치지는 않습니다.",
+              "본인이 사용할 권한이 있는 계정을 이용하고 로그인 수단을 안전하게 관리해 주세요. 미성년자의 계약에 법정대리인 동의가 필요한 경우에는 관련 법령이 적용됩니다."
+            ]
+          },
+          {
+            "heading": "3. 저장과 불러오기",
+            "paragraphs": [
+              "게스트 진행 정보는 기기에 저장됩니다. 로그인한 계정은 네트워크 연결과 저장 성공 여부에 따라 클라우드 진행 정보를 저장하거나 불러옵니다. 기기 저장소 삭제, 기기 변경, 연결 장애 또는 저장 충돌로 아직 동기화되지 않은 진행 정보가 사라질 수 있으므로 게임의 저장 상태를 확인해 주세요.",
+              "게임에서 진행 정보 선택 화면이 표시되면 기기에 저장된 게스트 진행을 계정에 가져오거나, 기기와 서버의 진행 중 사용할 정보를 선택할 수 있습니다. 초기화 전에 다른 기기에 남아 있던 본인의 진행을 선택하여 다시 올리는 것도 허용됩니다. 선택에 따라 현재 진행 정보가 바뀔 수 있으므로 화면의 안내를 확인해 주세요."
+            ]
+          },
+          {
+            "heading": "4. 진행 초기화와 계정 삭제",
+            "paragraphs": [
+              "진행 초기화는 진행도, 다이아몬드, 강화 및 게임 기록을 초기화합니다. 로그인 계정과 기기 설정은 유지됩니다. 초기화와 계정 삭제는 서로 다른 기능입니다.",
+              "계정 삭제는 해당 게임 계정의 클라우드 진행 정보, 현재 기기의 해당 계정 캐시 및 Firebase 로그인 계정을 삭제하는 절차입니다. Google 계정 자체는 삭제하지 않습니다. 다른 기기에 남아 있는 오프라인 사본이나 이용자가 별도로 만든 저장 사본까지 원격으로 삭제되는 것은 아닙니다. 오류나 재인증 요청이 표시되면 안내에 따라 절차를 완료해 주세요. 개인정보의 보유·파기는 개인정보 처리방침을 따릅니다."
+            ]
+          },
+          {
+            "heading": "5. 게임 재화와 현재 제공 기능",
+            "paragraphs": [
+              "다이아몬드 등 게임 재화는 게임 기능을 위한 가상 항목이며 현금이나 예금이 아닙니다. 현재 버전에는 실제 결제 및 구매에 따른 재화 지급 기능이 연결되어 있지 않습니다. Google Play에서 가격과 국가 정보를 조회하여 표시할 수 있으나 이 조회만으로 결제되거나 재화가 지급되지는 않습니다.",
+              "Android 버전은 AdMob 배너 광고와 이용자가 직접 시작하는 보상형 광고를 지원합니다. 전면 광고는 표시하지 않습니다. Web 버전에는 광고 SDK가 연결되어 있지 않습니다.",
+              "이용 가능한 보상형 광고의 보상은 다이아몬드 50개이며, SDK가 기록한 보상 획득 시점을 기준으로 12시간의 대기 시간이 적용됩니다. 광고 SDK가 보상 획득을 알리고 게임이 지급 내역을 저장한 뒤 보상을 반영합니다. 광고를 닫는 것만으로 보상이 지급되지는 않습니다. 네트워크, 개인정보 선택 또는 서비스 오류에 따라 광고 이용이나 보상 처리가 제한·지연될 수 있으며, 현재 이용 가능 여부와 대기 시간은 게임에서 안내합니다.",
+              "향후 유료 기능을 제공할 경우 가격, 결제 조건 및 관련 법령에 따른 취소·환불 조건을 구매 전에 별도로 안내합니다. 이 약관은 향후 구매에 대한 동의를 미리 받는 것이 아닙니다."
+            ]
+          },
+          {
+            "heading": "6. 올바른 이용과 콘텐츠 권리",
+            "paragraphs": [
+              "타인의 계정을 무단으로 사용하거나 서비스·서버를 공격하고, 다른 이용자의 이용을 방해하거나 타인의 권리를 침해하는 행위를 해서는 안 됩니다. 법령이 허용하는 이용을 제외한 게임 콘텐츠의 무단 복제·배포는 제한됩니다. 콘텐츠에 관한 권리는 운영자 또는 정당한 권리자에게 있습니다.",
+              "위반에 대한 이용 제한은 서비스 보호에 필요한 범위에서 이루어집니다. 운영자는 사유와 이의제기 방법을 안내하며, 긴급한 보안 대응 등으로 사전 안내가 어려운 경우에는 사후에 안내합니다. 이의제기는 위 문의 이메일로 할 수 있습니다."
+            ]
+          },
+          {
+            "heading": "7. 서비스와 약관의 변경",
+            "paragraphs": [
+              "점검, 장애 대응 또는 기능 개선을 위해 서비스를 변경하거나 일시 중단할 수 있습니다. 이용에 중요한 변경이나 서비스 종료는 가능한 한 미리 게임 내에서 안내하고, 긴급한 경우에는 사후에 안내합니다.",
+              "약관을 변경할 때에는 변경 내용과 적용일을 미리 알리고, 법령상 동의가 필요한 경우 별도 동의를 받습니다. 동의하지 않는 이용자는 이용을 중단하고 계정 삭제를 요청할 수 있습니다."
+            ]
+          },
+          {
+            "heading": "8. 책임과 분쟁 해결",
+            "paragraphs": [
+              "운영자와 이용자의 책임은 적용 법령에 따릅니다. 이 약관은 운영자의 고의·중대한 과실에 대한 책임이나 법령상 배제할 수 없는 책임을 면제하거나 이용자의 법정 권리를 제한하지 않습니다.",
+              "불편이나 분쟁은 hyunbae402@gmail.com으로 알려 주세요. 합의되지 않는 분쟁의 해결 절차와 관할은 적용 법령에 따르며, 이 약관은 강제 중재나 법원에 구제를 요청할 권리의 포기를 요구하지 않습니다."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Fantasy Random Defense Terms of Service",
+        "sections": [
+          {
+            "heading": "1. Operator and scope",
+            "paragraphs": [
+              "These terms apply to Fantasy Random Defense, operated by hyunbbai (the “operator”). Contact: hyunbae402@gmail.com. Effective date: October 9, 2026.",
+              "You may use the service after reviewing and accepting the terms in the game. The separate Privacy Policy explains how personal information is handled."
+            ]
+          },
+          {
+            "heading": "2. Guest play and accounts",
+            "paragraphs": [
+              "You can play as a guest or use Google sign-in for an account and cloud saves. On supported platforms, you may optionally link Google Play Games to your existing game account. Progress from different game accounts is not automatically combined.",
+              "Use only an account you are authorized to use and keep your sign-in methods secure. Applicable law governs any parental or guardian consent required for a minor to enter a contract."
+            ]
+          },
+          {
+            "heading": "3. Saving and loading",
+            "paragraphs": [
+              "Guest progress is stored on your device. Account progress can be saved to or loaded from the cloud depending on connectivity and successful synchronization. Clearing device storage, changing devices, connection failures or save conflicts may cause unsynchronized progress to be lost. Please check the save status shown in the game.",
+              "When the game offers a progress-selection screen, you can bring local guest progress into an account or choose between device and server progress. You are also allowed to select and reupload your own pre-reset progress remaining on another device. Your selection can replace current progress; please review the on-screen explanation."
+            ]
+          },
+          {
+            "heading": "4. Progress reset and account deletion",
+            "paragraphs": [
+              "A progress reset clears progress, diamonds, upgrades and game records. It keeps your sign-in account and device settings. Resetting progress and deleting an account are different actions.",
+              "Account deletion removes the account’s cloud progress, its cache on the current device and its Firebase sign-in account. It does not delete your Google Account. It does not remotely erase every offline copy on other devices or separate save copies you made. If an error or reauthentication request appears, follow the instructions to finish. Personal-information retention and deletion are described in the Privacy Policy."
+            ]
+          },
+          {
+            "heading": "5. Virtual items and current features",
+            "paragraphs": [
+              "Diamonds and other game resources are virtual items for game functions, not cash or deposits. The current version has no live payments or purchase-based resource grants. It may display prices and country information queried from Google Play. Those queries do not charge you or grant resources.",
+              "The Android version supports AdMob banner ads and rewarded ads that you choose to start. It does not show interstitial ads. Advertising SDKs are not integrated into the Web version.",
+              "An available rewarded ad offers 50 diamonds, with a 12-hour waiting period measured from the SDK-recorded time the reward was earned. The game records the reward after the advertising SDK reports that it was earned and the game saves the grant. Closing an ad alone does not earn a reward. Ad availability and reward processing may be affected by connectivity, privacy choices or service errors; the game displays the current availability and waiting period.",
+              "If paid features are introduced, prices, payment terms and cancellation or refund terms under applicable law will be explained before purchase. These terms do not provide advance consent to future purchases."
+            ]
+          },
+          {
+            "heading": "6. Appropriate use and content rights",
+            "paragraphs": [
+              "Do not use another person’s account without authorization, attack the service or its servers, interfere with other players or infringe others’ rights. Unauthorized copying or distribution of game content is restricted, except where permitted by law. Content rights belong to the operator or their lawful owners.",
+              "Restrictions for violations will be limited to what is necessary to protect the service. The operator will explain the reason and how to challenge the restriction. Where urgent security action makes advance notice impractical, notice will follow. You may challenge a restriction by emailing the contact above."
+            ]
+          },
+          {
+            "heading": "7. Changes to the service or terms",
+            "paragraphs": [
+              "The service may change or be temporarily interrupted for maintenance, incident response or improvements. Important changes or closure will be announced in the game beforehand where practicable; urgent changes may be announced afterward.",
+              "Changes to these terms and their effective date will be announced in advance. Separate agreement will be obtained where required by law. If you do not agree, you may stop using the service and request account deletion."
+            ]
+          },
+          {
+            "heading": "8. Responsibility and disputes",
+            "paragraphs": [
+              "The operator’s and your responsibilities are governed by applicable law. These terms do not exclude liability for the operator’s intentional misconduct or gross negligence, exclude other liability that cannot lawfully be excluded, or limit your statutory rights.",
+              "Please report concerns or disputes to hyunbae402@gmail.com. Applicable law governs unresolved disputes and jurisdiction. These terms do not require binding arbitration or a waiver of your right to seek relief in court."
+            ]
+          }
+        ]
+      },
+      "zh_CN": {
+        "title": "Fantasy Random Defense 使用条款",
+        "sections": [
+          {
+            "heading": "1. 运营者与适用范围",
+            "paragraphs": [
+              "本条款适用于由 hyunbbai（以下简称“运营者”）运营的 Fantasy Random Defense。联系方式：hyunbae402@gmail.com。生效日期：2026年10月9日。",
+              "您可以在游戏中阅读并同意本条款后使用服务。个人信息的处理方式详见单独的隐私政策。"
+            ]
+          },
+          {
+            "heading": "2. 游客与账号",
+            "paragraphs": [
+              "您可以以游客身份游玩，也可以通过 Google 登录使用账号和云存档。在支持的平台上，您可以选择将 Google Play Games 关联到现有游戏账号。不同游戏账号的进度不会自动合并。",
+              "请仅使用您有权使用的账号，并妥善保护登录方式。未成年人订立合同如需法定代理人同意，应遵守适用法律。"
+            ]
+          },
+          {
+            "heading": "3. 保存与读取",
+            "paragraphs": [
+              "游客进度保存在设备上。账号进度能否保存到云端或从云端读取，取决于网络连接及同步是否成功。清除设备存储、更换设备、连接中断或存档冲突，可能导致尚未同步的进度丢失。请留意游戏显示的保存状态。",
+              "游戏显示进度选择界面时，您可以将本地游客进度导入账号，或选择使用设备进度或服务器进度。您也可以选择并重新上传其他设备上保留的本人重置前进度。选择可能替换当前进度，请先阅读屏幕上的说明。"
+            ]
+          },
+          {
+            "heading": "4. 重置进度与删除账号",
+            "paragraphs": [
+              "重置进度会清除进度、钻石、强化和游戏记录，但保留登录账号及设备设置。重置进度与删除账号是不同的操作。",
+              "删除账号是删除该游戏账号的云端进度、当前设备上的该账号缓存以及 Firebase 登录账号的流程，不会删除您的 Google 账号，也不会远程清除其他设备上的所有离线副本或您另行制作的存档副本。若出现错误或重新验证身份的提示，请按指引完成流程。个人信息的保留与删除详见隐私政策。"
+            ]
+          },
+          {
+            "heading": "5. 虚拟物品与当前功能",
+            "paragraphs": [
+              "钻石等游戏资源是用于游戏功能的虚拟物品，不是现金或存款。当前版本尚未接入实际付款或购买后发放资源的功能。游戏可能显示从 Google Play 查询的价格和国家信息，但仅进行查询不会扣款或发放资源。",
+              "Android 版本支持 AdMob 横幅广告和由您主动开始的激励广告，不展示插屏广告。Web 版本尚未接入广告 SDK。",
+              "可用激励广告的奖励为50颗钻石，等待时间为12小时，自 SDK 记录的奖励获得时间起算。广告 SDK 通知已获得奖励且游戏保存发放记录后，游戏才会计入奖励。仅关闭广告不会获得奖励。网络状况、隐私选择或服务错误可能影响广告可用性或延迟奖励处理；当前可用状态和等待时间会在游戏中显示。",
+              "如果今后推出付费功能，将在购买前另行说明价格、付款条件以及适用法律规定的取消和退款条件。本条款不构成您对今后购买的预先同意。"
+            ]
+          },
+          {
+            "heading": "6. 合理使用与内容权利",
+            "paragraphs": [
+              "不得未经授权使用他人账号、攻击服务或服务器、干扰其他玩家或侵犯他人权利。除法律允许的情形外，不得擅自复制或传播游戏内容。内容权利归运营者或合法权利人所有。",
+              "针对违规行为的使用限制将限于保护服务所必需的范围。运营者会说明原因及提出异议的方法。如紧急安全处置导致无法事先通知，将事后通知。您可以通过上述邮箱提出异议。"
+            ]
+          },
+          {
+            "heading": "7. 服务或条款的变更",
+            "paragraphs": [
+              "为维护、处理故障或改进功能，服务可能变更或暂时中断。对使用有重要影响的变更或服务终止，将尽可能提前在游戏内通知；紧急情况下可能在事后通知。",
+              "本条款的变更内容及生效日期将提前公布。法律要求另行取得同意时，将另行征求同意。若不同意，您可以停止使用服务并请求删除账号。"
+            ]
+          },
+          {
+            "heading": "8. 责任与争议解决",
+            "paragraphs": [
+              "运营者与您的责任依适用法律确定。本条款不免除运营者故意或重大过失造成的责任，不排除法律规定不得排除的其他责任，也不限制您的法定权利。",
+              "如有问题或争议，请联系 hyunbae402@gmail.com。未能协商解决的争议，其解决程序和管辖依适用法律确定。本条款不要求强制仲裁，也不要求您放弃向法院寻求救济的权利。"
+            ]
+          }
+        ]
+      },
+      "ja": {
+        "title": "Fantasy Random Defense 利用規約",
+        "sections": [
+          {
+            "heading": "1. 運営者と適用範囲",
+            "paragraphs": [
+              "本規約は、hyunbbai（以下「運営者」）が提供する Fantasy Random Defense の利用に適用されます。お問い合わせ：hyunbae402@gmail.com。施行日：2026年10月9日。",
+              "ゲーム内で本規約を確認し、同意したうえでサービスをご利用いただけます。個人情報の取扱いは、別途プライバシーポリシーで説明します。"
+            ]
+          },
+          {
+            "heading": "2. ゲストとアカウント",
+            "paragraphs": [
+              "ゲストとしてプレイするか、Google ログインでアカウントとクラウド保存を利用できます。対応環境では、既存のゲームアカウントに Google Play Games を任意で連携できます。異なるゲームアカウントの進行状況が自動的に統合されることはありません。",
+              "利用権限のあるアカウントを使用し、ログイン手段を適切に管理してください。未成年者の契約に法定代理人の同意が必要な場合は、適用法令に従います。"
+            ]
+          },
+          {
+            "heading": "3. 保存と読み込み",
+            "paragraphs": [
+              "ゲストの進行状況は端末に保存されます。アカウントの進行状況は、ネットワーク接続や同期の成否に応じてクラウドに保存、またはクラウドから読み込まれます。端末の保存データの消去、端末の変更、接続障害、保存の競合により、未同期の進行状況が失われる場合があります。ゲーム内の保存状態を確認してください。",
+              "ゲームで進行状況の選択画面が表示された場合、端末のゲスト進行状況をアカウントに取り込むか、端末とサーバーのどちらの進行状況を使うか選べます。他の端末に残る自分のリセット前の進行状況を選び、再度アップロードすることも認められます。選択によって現在の進行状況が置き換わる場合があるため、画面の説明を確認してください。"
+            ]
+          },
+          {
+            "heading": "4. 進行状況のリセットとアカウント削除",
+            "paragraphs": [
+              "進行状況をリセットすると、進行度、ダイヤモンド、強化、ゲーム記録が初期化されます。ログインアカウントと端末設定は維持されます。進行状況のリセットとアカウント削除は別の操作です。",
+              "アカウント削除は、対象アカウントのクラウド上の進行状況、現在の端末上の当該アカウントのキャッシュ、Firebase のログインアカウントを削除する手続きです。Google アカウント自体は削除しません。他の端末のオフラインコピーや利用者が別途作成した保存コピーをすべて遠隔削除するものではありません。エラーや再認証の案内が出た場合は、案内に従って手続きを完了してください。個人情報の保存と削除はプライバシーポリシーに従います。"
+            ]
+          },
+          {
+            "heading": "5. ゲーム内アイテムと現在の機能",
+            "paragraphs": [
+              "ダイヤモンドなどのゲーム内資源は、ゲームの機能に使う仮想アイテムであり、現金や預金ではありません。現在のバージョンには、実際の決済や購入に応じた資源の付与機能は組み込まれていません。Google Play から取得した価格や国の情報を表示する場合がありますが、その照会だけで課金や資源の付与は行われません。",
+              "Android 版は AdMob のバナー広告と、利用者が自分で開始するリワード広告に対応しています。インタースティシャル広告は表示しません。Web 版には広告 SDK は組み込まれていません。",
+              "利用可能なリワード広告の報酬はダイヤモンド50個で、SDK が記録した報酬獲得時刻を基準に12時間の待機時間が適用されます。広告 SDK が報酬の獲得を通知し、ゲームが付与記録を保存した後に報酬を反映します。広告を閉じるだけでは報酬は付与されません。接続状況、プライバシーの選択、サービスのエラーにより広告の利用や報酬の処理が制限・遅延する場合があります。現在の利用可否と待機時間はゲーム内に表示します。",
+              "今後、有料機能を提供する場合は、価格、決済条件、適用法令に基づく取消し・返金条件を購入前に別途案内します。本規約は将来の購入に対する事前の同意ではありません。"
+            ]
+          },
+          {
+            "heading": "6. 適切な利用とコンテンツの権利",
+            "paragraphs": [
+              "他人のアカウントの無断使用、サービスやサーバーへの攻撃、他の利用者の妨害、他人の権利の侵害を行ってはいけません。法令で認められる場合を除き、ゲームコンテンツの無断複製・配布は制限されます。コンテンツの権利は、運営者または正当な権利者に帰属します。",
+              "違反に対する利用制限は、サービス保護に必要な範囲で行います。運営者は理由と異議申立て方法を案内します。緊急のセキュリティ対応などで事前案内が難しい場合は、事後に案内します。異議は上記のメールアドレスに申し立てることができます。"
+            ]
+          },
+          {
+            "heading": "7. サービスと規約の変更",
+            "paragraphs": [
+              "保守、障害対応、機能改善のためにサービスを変更または一時停止することがあります。利用に重大な影響のある変更やサービス終了は、可能な限り事前にゲーム内で案内し、緊急の場合は事後に案内します。",
+              "本規約を変更する場合は、変更内容と適用日を事前に知らせ、法令上必要な場合は別途同意を得ます。同意しない場合は、利用を中止し、アカウント削除を求めることができます。"
+            ]
+          },
+          {
+            "heading": "8. 責任と紛争解決",
+            "paragraphs": [
+              "運営者と利用者の責任は適用法令に従います。本規約は、運営者の故意・重大な過失による責任や、法令上免除できない責任を免除せず、利用者の法定の権利を制限しません。",
+              "問題や紛争については hyunbae402@gmail.com にご連絡ください。解決しない紛争の手続きと管轄は適用法令に従います。本規約は強制仲裁や、裁判所に救済を求める権利の放棄を求めません。"
+            ]
+          }
+        ]
+      }
+    },
+    "privacy": {
+      "ko": {
+        "title": "Fantasy Random Defense 개인정보 처리방침",
+        "sections": [
+          {
+            "heading": "1. 운영자와 개인정보 문의",
+            "paragraphs": [
+              "Fantasy Random Defense의 운영자 및 개인정보 보호 담당자는 hyunbbai입니다. 개인정보 문의와 권리 행사: hyunbae402@gmail.com. 시행일: 2026년 10월 9일.",
+              "이 방침은 게임의 계정, 저장, Android 광고 및 관련 기능에서 처리하는 정보를 설명합니다. 이 방침의 확인이나 이용약관 동의는 광고 또는 그 밖의 처리에 법령상 별도로 필요한 동의를 대신하지 않습니다."
+            ]
+          },
+          {
+            "heading": "2. 처리하는 정보와 수집 방법",
+            "paragraphs": [
+              "Google 로그인 시 Firebase Authentication을 통해 계정 식별자(UID), 이메일, 표시 이름 및 인증 토큰을 처리합니다. 지원 환경에서 선택적으로 Google Play Games를 연결하면 동일한 게임 UID에 로그인 연결 정보가 연계됩니다. 게임은 Google 비밀번호를 직접 수집하지 않습니다.",
+              "계정 이용 시 진행도, 다이아몬드 잔액과 변동 내역, 강화 상태, 게임 기록 및 저장 버전 등 동기화 정보가 UID와 연결되어 Cloud Firestore에 저장됩니다. 로그인·저장 과정에서 필요한 정보는 Google 로그인 및 게임 이용을 통해 제공되거나 생성됩니다.",
+              "Android의 Google Mobile Ads SDK는 대략적인 위치를 추정할 수 있는 IP 주소, 앱 실행·탭·광고 조회 등 앱·광고 상호작용, 성능·진단 정보, Android 광고 ID, 앱 세트 ID 및 해당되는 경우 기기에 로그인된 계정과 관련된 다른 식별자를 수집·공유합니다. 실제 수집은 적용되는 설정과 식별자 사용 가능 여부에 따라 달라집니다. 게스트 이용 중에도 이러한 처리가 발생할 수 있습니다.",
+              "이메일로 문의하면 발신 이메일 주소와 문의 내용 등 이용자가 보낸 정보를 문제 해결에 사용합니다. 문의에 비밀번호나 인증 토큰을 보내지 마세요."
+            ]
+          },
+          {
+            "heading": "3. 기기에 저장되는 정보와 국가 설정",
+            "paragraphs": [
+              "게스트 진행 정보와 계정의 로컬 저장 사본은 기기 파일 또는 웹 브라우저의 IndexedDB에 저장됩니다. 언어, 선택한 국가, 음량 등 기기 설정과 약관 동의 버전 및 시각은 기기에 저장하며 게임의 클라우드 진행 정보에 포함하지 않습니다.",
+              "Google Play 가격 조회를 지원하는 환경에서는 Play Billing이 반환하는 가격과 국가 정보를 현재 실행 중인 세션에서 사용합니다. 국가 설정을 위해 별도 외부 IP 조회 서비스를 호출하지 않습니다. 이용자가 선택한 국가는 법적 관할이나 광고 동의 필요 여부를 결정하는 기준이 아닙니다. 이와 별개로 광고 SDK는 IP 주소에서 대략적인 위치를 추정할 수 있습니다.",
+              "UMP는 광고 관련 개인정보 선택을 기기에 보관하며, 광고 요청에 해당 동의 신호가 전달될 수 있습니다. 게임은 보상 관리와 중복 지급 방지를 위해 보상형 광고의 지급 내역과 대기 시간 정보를 진행 정보에 저장하며, 계정의 진행 정보는 기존 클라우드 저장 기능으로 동기화될 수 있습니다. 이와 별개로 Android 광고 연결 기능은 원래 값을 직접 드러내지 않는 해시 처리된 저장 범위 식별자, 무작위 요청 식별자 및 보상 획득 시각으로 구성된 미처리 보상 수신 기록을 기기에만 보관합니다. 이 기록에는 이메일이나 원본 Firebase UID를 넣지 않으며, 해당 값을 광고 보상 검증 정보로 전송하지 않습니다. 이 기록은 SDK 콜백의 수신 기록이며 서버 측 보상 검증 결과가 아닙니다.",
+              "브라우저 사이트 데이터나 앱 데이터를 지우면 로컬 저장 정보도 지워질 수 있습니다. 저장을 차단하면 진행 유지나 설정 저장이 정상적으로 동작하지 않을 수 있습니다."
+            ]
+          },
+          {
+            "heading": "4. 이용 목적과 처리 근거",
+            "paragraphs": [
+              "계정 식별·로그인, 선택한 계정 연결, 진행 저장·복원·동기화 및 관련 문의 처리를 위해 필요한 정보를 처리합니다. 이용자가 요청한 계정·클라우드 저장 서비스에 필요한 처리는 계약 체결·이행을 위한 개인정보 보호법 제15조 제1항 제4호를 근거로 합니다.",
+              "삭제 요청의 이행과 이전 UID에 연결된 데이터의 재생성 방지에도 필요한 최소 정보를 사용합니다. 별도 동의가 필요한 처리는 해당 내용을 알리고 동의를 받은 범위에서만 진행합니다.",
+              "Android 광고 SDK는 위 정보를 광고 제공, 광고 관련 분석 및 부정행위 방지에 이용합니다. 현재 Android 게임은 모든 이용자에 대해 광고 맞춤설정을 비활성화하여 광고를 요청합니다. 게임은 Google User Messaging Platform(UMP)을 사용하여 필요한 개인정보 안내와 광고 선택을 제공하며, 동의가 필요한 경우 광고 요청 전에 이를 처리합니다. 게임 이용약관 동의는 광고 관련 정보 처리에 별도로 필요한 동의를 대신하지 않습니다.",
+              "비맞춤형 광고라고 해서 정보 처리가 없는 것은 아닙니다. SDK는 위에서 설명한 IP 주소, 식별자, 상호작용 및 진단 정보를 계속 처리할 수 있습니다. 선택과 서비스 제공 상황에 따라 비맞춤형·제한적 광고가 표시되거나 광고를 이용할 수 없을 수 있습니다. 보상형 광고를 시작하지 않아도 일반적인 게임 플레이는 이용할 수 있습니다."
+            ]
+          },
+          {
+            "heading": "5. 서비스 제공업체와 정보 제공",
+            "paragraphs": [
+              "Google의 Firebase Authentication과 Cloud Firestore를 계정 인증 및 클라우드 저장에 사용합니다. 선택적 Play Games 연결과 읽기 전용 Play Billing 조회에는 해당 Google 서비스를 사용합니다. Google의 관련 개인정보 안내: https://firebase.google.com/support/privacy 및 https://policies.google.com/privacy. Firebase 개인정보 문의: https://firebase.google.com/support/troubleshooter/contact.",
+              "Firebase Authentication은 보안과 악용 방지를 위해 IP 주소와 사용자 에이전트 등 기술 정보를 처리합니다. 웹 호스팅 및 Google 서비스에서도 요청 시각, IP 주소, 기기·브라우저 정보 등 제공·보안에 필요한 통신 정보가 처리될 수 있습니다. 게스트 이용이 네트워크 정보 처리나 위 Android 광고 SDK의 처리를 없애는 것은 아닙니다.",
+              "Android 배너·보상형 광고에는 Google AdMob과 Google Mobile Ads SDK를 사용하며, 관련 개인정보 안내와 선택에는 UMP를 사용합니다. Google은 이 방침과 다음 공식 안내에 따라 정보를 처리합니다: https://policies.google.com/privacy 및 https://policies.google.com/technologies/partner-sites. SDK 데이터 공개 안내: https://developers.google.com/admob/android/privacy/play-data-disclosure. 그 밖의 제공이 필요한 경우에는 법령상 근거를 확인하고, 동의가 필요한 경우 먼저 동의를 받습니다."
+            ]
+          },
+          {
+            "heading": "6. 국외 처리",
+            "paragraphs": [
+              "이전받는 서비스 제공자: Google의 Firebase 서비스. 개인정보 안내 및 연락처는 제5항의 Firebase 공식 페이지에서 확인할 수 있습니다. 이전 국가: 미국. Firebase Authentication은 미국에서 처리되며, 이 게임의 Cloud Firestore 저장 위치는 미국 멀티리전 nam5입니다.",
+              "이전 항목: Firebase Authentication에 필요한 UID, 이메일, 표시 이름, 인증 정보와 관련 기술 정보; Cloud Firestore에 저장하는 UID 및 제2항의 게임 진행·동기화 정보. 목적: 계정 인증·관리, 보안 및 이용자가 요청한 클라우드 저장·복원.",
+              "이전 시기와 방법: 로그인, 인증 갱신, 계정 연결, 저장·불러오기 및 삭제 요청 시 인터넷을 통해 HTTPS로 전송합니다. 보유·이용 기간은 제7항과 같으며 Firebase의 인증 정보 삭제 기간도 적용됩니다.",
+              "이 처리는 요청한 계정·클라우드 저장 계약의 이행에 필요한 국외 처리위탁·보관으로, 개인정보 보호법 제28조의8 제1항 제3호에 따라 관련 내용을 공개합니다. 로그인을 선택하지 않고 게스트로 이용하면 계정·클라우드 저장을 위한 이전을 거부할 수 있습니다. 이미 이용 중이라면 로그아웃하여 추가 동기화를 중단하고 계정 삭제 또는 이메일 요청으로 저장 정보의 삭제를 요청할 수 있습니다. 이 경우 기기 간 클라우드 저장·복원은 이용할 수 없습니다.",
+              "위 계정·클라우드 저장 이전 설명이 Android 광고의 모든 처리를 포함하는 것은 아닙니다. Google은 제5항의 Google 개인정보 안내에 따라 제2항의 광고 관련 정보를 이용자의 국가 외에 있는 서버에서 처리할 수 있습니다. 로그아웃하거나 게스트를 선택하면 계정 동기화는 중단되지만, 그 자체로 광고 관련 처리가 중단되지는 않습니다. 광고 관련 안내와 필요한 동의는 계정·클라우드 저장 계약과 별개입니다."
+            ]
+          },
+          {
+            "heading": "7. 보유 기간과 파기",
+            "paragraphs": [
+              "계정과 클라우드 진행 정보는 해당 계정을 제공하는 동안 보유합니다. 계정 삭제 시 진행 정보 삭제와 인증 계정 삭제를 진행합니다. 삭제 처리 완료 및 이전 UID에 연결된 데이터의 재생성 방지를 위해 필요한 최소 UID 연계 정보는 계정 삭제 후 최대 30일까지만 보유하고, 목적이 먼저 달성되면 지체 없이 파기합니다. 보유 기간이 끝난 전자 정보는 삭제하여 복구·재생되지 않도록 처리합니다.",
+              "Google의 Firebase Authentication은 기록된 IP 주소를 몇 주 동안 보유합니다. 그 밖의 인증 정보는 운영자가 해당 사용자 삭제를 시작한 뒤 Google의 운영·백업 시스템에서 최대 180일 이내에 제거된다고 안내하고 있습니다. 이 제공업체의 삭제 주기는 운영자의 게임 데이터 30일 보유 한도와 구별됩니다.",
+              "기기의 게스트 저장, 설정 및 약관 동의 기록은 이용자가 삭제하거나 앱·브라우저 데이터가 지워질 때까지 남을 수 있습니다. 문의 정보는 답변과 관련 조치가 완료되어 더 이상 필요하지 않으면 지체 없이 파기합니다.",
+              "Android의 미처리 보상 수신 기록은 게임이 처리 확인을 보내거나 진행 초기화·계정 삭제·명시적인 진행 교체 선택으로 해당 미처리 보상이 정리될 때까지 기기에 남습니다. 로그아웃만 하면 해당 계정에서 나중에 복구할 수 있도록 미처리 기록이 유지됩니다. 앱 데이터를 지우면 이러한 기기 기록도 지워집니다. 보상 내역과 대기 시간 정보는 해당 정보를 포함하는 게임 데이터의 저장·삭제 기준을 따릅니다. Google 광고 정보에는 https://policies.google.com/privacy 및 https://policies.google.com/technologies/ads 에서 안내하는 Google의 보유·삭제 기준이 적용되며, 게임의 UID 정보에 대한 30일 보유 한도가 Google 광고 정보에 적용되는 것은 아닙니다."
+            ]
+          },
+          {
+            "heading": "8. 초기화·삭제의 범위",
+            "paragraphs": [
+              "진행 초기화는 게임 진행을 지우지만 로그인 계정, 언어·국가·음량 등의 기기 설정 및 약관 동의 기록을 유지합니다. 이용자는 진행 정보 선택 화면에서 초기화 전에 다른 기기에 남아 있던 본인의 진행을 선택하여 다시 올릴 수 있습니다.",
+              "계정 삭제는 해당 계정의 클라우드 진행 정보와 현재 기기의 해당 계정 로컬 사본 및 Firebase 인증 계정을 삭제하는 절차이며, Google 계정 자체를 삭제하지 않습니다. 네트워크 오류나 재인증이 필요한 경우 화면에 남은 절차가 안내될 수 있습니다.",
+              "다른 기기의 오프라인 사본이나 이용자가 별도로 만든 저장 사본을 원격으로 모두 지울 수는 없습니다. 해당 사본은 이용자가 그 기기나 파일에서 삭제해야 합니다. 계정과 별개인 기기 설정·약관 동의 기록까지 지우려면 앱 또는 브라우저의 저장 데이터를 지울 수 있습니다.",
+              "게임 계정 삭제만으로 Google의 광고 기록이 삭제되거나 광고 관련 선택이 자동 철회되지는 않습니다. 해당 목적에는 제공되는 광고 개인정보 선택과 Google의 개인정보 관리 기능을 이용해 주세요."
+            ]
+          },
+          {
+            "heading": "9. 이용자와 법정대리인의 권리",
+            "paragraphs": [
+              "개인정보의 열람, 정정, 삭제, 처리정지 및 동의 철회 등 적용 법령상 권리는 hyunbae402@gmail.com으로 요청할 수 있습니다. 계정 삭제는 게임 내 기능도 이용할 수 있습니다. 요청자의 권한을 확인하는 데 필요한 최소 정보를 요청할 수 있으며, 법령에 따라 처리 결과나 제한 사유를 안내합니다.",
+              "Android에서는 UMP가 개인정보 선택 기능을 제공하는 경우 설정에 광고 개인정보 선택 항목이 표시됩니다. 여기에서 선택 내용을 확인·변경하고, 제공되는 경우 동의를 철회할 수 있습니다. Android 설정에서는 광고 ID를 재설정하거나 삭제할 수도 있습니다. 이러한 설정만으로 모든 기술 정보 처리가 중단되는 것은 아니며, 자세한 내용은 제5항의 Google 안내를 확인해 주세요.",
+              "법정대리인은 아동의 개인정보에 관한 권리를 행사할 수 있습니다. 대한민국 법령상 만 14세 미만 아동의 개인정보 처리에 동의가 필요한 경우에는 법정대리인의 동의와 확인이 필요합니다. 필요한 동의 없이 아동의 정보가 처리되었다고 생각되면 위 이메일로 삭제 등 필요한 조치를 요청해 주세요.",
+              "개인정보 관련 상담·신고는 개인정보보호 포털 https://www.privacy.go.kr, 분쟁 조정은 개인정보분쟁조정위원회 https://www.kopico.go.kr을 통해서도 확인할 수 있습니다."
+            ]
+          },
+          {
+            "heading": "10. 보호 조치와 방침 변경",
+            "paragraphs": [
+              "계정·저장 서버와 통신할 때 HTTPS를 사용합니다. 운영자는 개인정보에 대한 접근을 필요한 범위로 제한하고, 인증 및 저장 접근 통제를 관리하여 개인정보를 보호합니다.",
+              "처리 목적, 항목, 제공업체 또는 국외 처리 등 중요한 내용이 달라지면 개정 내용과 시행일을 게임에서 안내하고, 법령상 추가 동의가 필요한 경우 이를 받습니다."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Fantasy Random Defense Privacy Policy",
+        "sections": [
+          {
+            "heading": "1. Operator and privacy contact",
+            "paragraphs": [
+              "The operator and privacy contact for Fantasy Random Defense is hyunbbai. For privacy questions or rights requests, email hyunbae402@gmail.com. Effective date: October 9, 2026.",
+              "This policy explains information processed for accounts, saves, Android advertising and related game features. Acknowledging this policy or accepting the terms does not replace any separate consent required for advertising or other processing."
+            ]
+          },
+          {
+            "heading": "2. Information and collection methods",
+            "paragraphs": [
+              "Google sign-in uses Firebase Authentication to process your account identifier (UID), email, display name and authentication tokens. Optional Google Play Games linking on supported platforms associates sign-in linking information with the same game UID. The game does not directly collect your Google password.",
+              "When you use an account, Cloud Firestore stores progress, diamond balances and changes, upgrades, game records, and synchronization information such as save versions, linked to your UID. Information needed for sign-in and saving is supplied or generated through Google sign-in and game use.",
+              "On Android, Google Mobile Ads SDK collects and shares IP addresses (which may indicate general location), app and ad interactions such as launches, taps and views, performance and diagnostic information, Android advertising IDs, app set IDs and, where applicable, other identifiers associated with accounts signed in on the device. Collection depends on applicable settings and available identifiers. This can also occur during guest play.",
+              "If you email support, the sender’s email address, message and other information you provide are used to resolve the issue. Do not send passwords or authentication tokens."
+            ]
+          },
+          {
+            "heading": "3. Device storage and country settings",
+            "paragraphs": [
+              "Guest progress and local account-save copies are stored in device files or the browser’s IndexedDB. Language, selected country, volume and other device settings, together with the version and time of terms acceptance, are stored on the device and are not included in the game’s cloud progress.",
+              "On platforms supporting Google Play price queries, price and country information returned by Play Billing is used for the current session. The game does not call a separate external IP-lookup service to set your country. Your selected country does not establish your legal jurisdiction or determine advertising-consent requirements. Separately, the advertising SDK may infer general location from an IP address.",
+              "UMP keeps advertising privacy choices on the device, and advertising requests can carry the corresponding consent signals. The game stores rewarded-ad grant history and waiting-period information with progress to manage rewards and avoid duplicate grants; an account’s progress can be synchronized through the existing cloud-save feature. Separately, the Android advertising bridge keeps a pending reward receipt only on the device, using an opaque hashed save-scope identifier, a random request identifier and the time the reward was earned. It does not put your email or raw Firebase UID in that receipt or send those values as advertising reward-verification data. This receipt records an SDK callback; it is not server-side reward verification.",
+              "Clearing browser site data or app data may remove local saves. Blocking storage may prevent progress and settings from being retained correctly."
+            ]
+          },
+          {
+            "heading": "4. Purposes and legal basis",
+            "paragraphs": [
+              "Necessary information is processed for account identification and sign-in, optional account linking, progress saving, restoration and synchronization, and related support. Processing necessary for the account and cloud-save service you request relies on contract formation or performance under Article 15(1)(4) of Korea’s Personal Information Protection Act.",
+              "The minimum necessary information is also used to complete deletion requests and prevent data associated with a former UID from being recreated. Processing that requires separate consent will occur only within the scope disclosed and agreed to.",
+              "The Android advertising SDK processes the information above for advertising, advertising-related analytics and fraud prevention. The current Android game requests ads with personalization disabled for all users. The game uses Google User Messaging Platform (UMP) to present required privacy messages and manage advertising choices before requesting ads when required. Accepting the game terms does not replace any separate consent required for advertising-related data processing.",
+              "Non-personalized advertising does not mean no data is processed: the SDK may still process the IP addresses, identifiers, interactions and diagnostic information described above. Depending on your choices and service availability, you may see non-personalized or limited ads, or ads may be unavailable. Choosing not to start a rewarded ad does not prevent ordinary play."
+            ]
+          },
+          {
+            "heading": "5. Service providers and disclosures",
+            "paragraphs": [
+              "Google’s Firebase Authentication and Cloud Firestore provide account authentication and cloud storage. Optional Play Games linking and read-only Play Billing queries use the corresponding Google services. Google’s relevant privacy information: https://firebase.google.com/support/privacy and https://policies.google.com/privacy. Firebase privacy contact: https://firebase.google.com/support/troubleshooter/contact.",
+              "Firebase Authentication processes technical information such as IP addresses and user agents for security and abuse prevention. Web hosting and Google services may also process request times, IP addresses, and device or browser information needed for delivery and security. Guest play does not eliminate network-information processing or the Android advertising SDK processing described above.",
+              "Android banner and rewarded ads use Google AdMob and Google Mobile Ads SDK; UMP manages the associated privacy messages and choices. Information is processed by Google as described in this policy and its official notices: https://policies.google.com/privacy and https://policies.google.com/technologies/partner-sites. SDK data disclosure: https://developers.google.com/admob/android/privacy/play-data-disclosure. Any additional disclosure requires a legal basis and, where required, your prior consent."
+            ]
+          },
+          {
+            "heading": "6. Overseas processing",
+            "paragraphs": [
+              "Recipient service provider: Google’s Firebase services. Privacy information and contact details are available on the official Firebase pages in Section 5. Destination: the United States. Firebase Authentication processes data in the United States, and this game’s Cloud Firestore storage location is the US multi-region nam5.",
+              "Information transferred: UID, email, display name, authentication information and related technical information needed by Firebase Authentication; and the UID and game-progress and synchronization information in Section 2 stored in Cloud Firestore. Purposes: account authentication and management, security, and the cloud saving and restoration you request.",
+              "Timing and method: information is transmitted over the internet using HTTPS during sign-in, authentication refresh, account linking, saving, loading and deletion requests. Retention follows Section 7, including Firebase’s authentication-data deletion period.",
+              "This overseas processing and storage is necessary to perform the account and cloud-save contract you request. These details are disclosed under Article 28-8(1)(3) of Korea’s Personal Information Protection Act. You can decline transfers for accounts and cloud saves by choosing guest play without signing in. If already signed in, you can sign out to stop further synchronization and request deletion through account deletion or email. Cloud saving and restoration across devices will then be unavailable.",
+              "The account and cloud-save transfer explanation above does not cover all Android advertising processing. Google may process the advertising information described in Section 2 on servers outside your country, under the Google privacy information linked in Section 5. Signing out or choosing guest play stops account synchronization but does not by itself stop this advertising processing. Advertising-related notices and any required consent are separate from the account and cloud-save contract."
+            ]
+          },
+          {
+            "heading": "7. Retention and disposal",
+            "paragraphs": [
+              "Account and cloud-progress information is retained while the account is provided. Account deletion initiates deletion of progress and the authentication account. Minimum UID-linked information needed to complete deletion and prevent recreation of data associated with the former UID is retained for no more than 30 days after account deletion, and is disposed of without delay if that purpose is met sooner. Electronic information whose retention period has ended is deleted with measures to prevent recovery or regeneration.",
+              "Google states that Firebase Authentication retains logged IP addresses for a few weeks. Other authentication information is removed from Google’s live and backup systems within 180 days after the operator initiates deletion of that user. This provider deletion cycle is separate from the operator’s 30-day limit for game data.",
+              "Guest saves, settings and terms-acceptance records on a device may remain until you delete them or clear app or browser data. Support information is disposed of without delay once the response and related action are complete and the information is no longer needed.",
+              "The Android pending reward receipt remains on the device until the game acknowledges processing it or the corresponding pending claim is cleared by a progress reset, account deletion or an explicit choice of replacement progress. Signing out alone leaves a pending claim for that account’s later recovery. Clearing app data also deletes these device records. Reward history and waiting-period information follow the storage and deletion rules for the game data that contains them. Google advertising data follows Google’s retention and deletion practices described at https://policies.google.com/privacy and https://policies.google.com/technologies/ads; the game’s 30-day UID retention limit does not apply to Google advertising data."
+            ]
+          },
+          {
+            "heading": "8. What reset and deletion cover",
+            "paragraphs": [
+              "A progress reset clears game progress but keeps the sign-in account, device settings such as language, country and volume, and terms-acceptance records. On a progress-selection screen, you may select and reupload your own pre-reset progress remaining on another device.",
+              "Account deletion removes that account’s cloud progress, local copies on the current device and Firebase Authentication account. It does not delete your Google Account. The game may show remaining steps if a network error occurs or reauthentication is required.",
+              "Offline copies on other devices and separate save copies you made cannot all be remotely erased. Delete those copies on the relevant device or from their file location. To also erase device settings and terms-acceptance records that are separate from the account, you can clear app or browser storage.",
+              "Deleting the game account does not delete Google’s advertising records or withdraw advertising choices automatically. Use the available advertising privacy options and Google’s privacy controls for those purposes."
+            ]
+          },
+          {
+            "heading": "9. Your rights and children’s representatives",
+            "paragraphs": [
+              "You may email hyunbae402@gmail.com to exercise rights under applicable law, including access, correction, deletion, restriction of processing and withdrawal of consent. You may also use in-game account deletion. We may ask for the minimum information needed to verify your authority and will explain the outcome or any lawful restriction on your request.",
+              "On Android, an advertising privacy-options control appears in Settings when UMP makes those options available. You can use it to review or change your choices, including withdrawing consent where offered. Android settings also provide controls to reset or delete the advertising ID. These controls do not necessarily stop all technical data processing; see Google’s notices in Section 5.",
+              "A legal representative may exercise a child’s personal-information rights. Where Korean law requires consent to process personal information of a child under 14, the legal representative’s consent and verification are required. If you believe a child’s information has been processed without required consent, email the contact above to request deletion or other appropriate action.",
+              "You can also find privacy complaint and advice channels at Korea’s Privacy Portal, https://www.privacy.go.kr, and dispute mediation at the Personal Information Dispute Mediation Committee, https://www.kopico.go.kr."
+            ]
+          },
+          {
+            "heading": "10. Safeguards and policy changes",
+            "paragraphs": [
+              "HTTPS is used to communicate with account and save servers. The operator limits access to personal information to what is necessary and manages authentication and storage-access controls to protect it.",
+              "If important details such as purposes, information types, providers or overseas processing change, the revised details and effective date will be announced in the game. Additional consent will be obtained where required by law."
+            ]
+          }
+        ]
+      },
+      "zh_CN": {
+        "title": "Fantasy Random Defense 隐私政策",
+        "sections": [
+          {
+            "heading": "1. 运营者与隐私联系渠道",
+            "paragraphs": [
+              "Fantasy Random Defense 的运营者及个人信息保护负责人为 hyunbbai。隐私咨询与权利请求请发送至 hyunbae402@gmail.com。生效日期：2026年10月9日。",
+              "本政策说明账号、存档、Android 广告及相关游戏功能所处理的信息。阅读本政策或同意使用条款，不替代法律要求的广告或其他处理活动的单独同意。"
+            ]
+          },
+          {
+            "heading": "2. 处理的信息与收集方式",
+            "paragraphs": [
+              "通过 Google 登录时，Firebase Authentication 会处理账号标识符（UID）、电子邮箱、显示名称及身份验证令牌。在支持的平台上选择关联 Google Play Games 时，登录关联信息会与同一游戏 UID 关联。游戏不直接收集您的 Google 密码。",
+              "使用账号时，Cloud Firestore 会保存与 UID 关联的进度、钻石余额及变动记录、强化状态、游戏记录，以及存档版本等同步信息。登录和保存所需的信息通过 Google 登录及游戏使用过程提供或生成。",
+              "在 Android 上，Google Mobile Ads SDK 会收集和共享 IP 地址（可用于估计大致位置）、应用启动、点击和广告观看等应用及广告互动信息、性能和诊断信息、Android 广告 ID、应用集 ID，以及适用时与设备上已登录账号有关的其他标识符。实际收集情况取决于适用设置和可用标识符。游客模式下也可能发生这些处理。",
+              "通过邮件咨询时，我们使用发件邮箱、邮件内容及您提供的其他信息解决问题。请勿发送密码或身份验证令牌。"
+            ]
+          },
+          {
+            "heading": "3. 设备存储与国家设置",
+            "paragraphs": [
+              "游客进度和账号存档的本地副本保存在设备文件或浏览器的 IndexedDB 中。语言、所选国家、音量等设备设置，以及同意条款的版本和时间，保存在设备上，不包含在游戏的云端进度中。",
+              "在支持 Google Play 价格查询的平台上，Play Billing 返回的价格和国家信息仅用于当前运行会话。游戏不会为设置国家而调用单独的外部 IP 查询服务。您选择的国家不确定您的法律管辖地，也不决定广告同意要求。与此独立，广告 SDK 可能根据 IP 地址估计大致位置。",
+              "UMP 在设备上保存广告隐私选择，广告请求可以携带相应的同意信号。游戏将激励广告奖励发放记录和等待时间信息保存在进度中，用于管理奖励及防止重复发放；账号进度可以通过现有云存档功能同步。与此独立，Android 广告桥接功能仅在设备上保存待处理的奖励回执，其中包含不直接显示原始值的哈希存档范围标识符、随机请求标识符及奖励获得时间。回执不包含您的电子邮箱或原始 Firebase UID，也不将这些值作为广告奖励验证数据发送。该回执记录 SDK 回调，并非服务器端奖励验证结果。",
+              "清除浏览器网站数据或应用数据可能同时删除本地存档。禁止存储可能导致进度或设置无法正常保留。"
+            ]
+          },
+          {
+            "heading": "4. 处理目的与法律依据",
+            "paragraphs": [
+              "必要信息用于账号识别和登录、可选账号关联、进度保存、恢复、同步及相关客服支持。为提供您请求的账号和云存档服务所必需的处理，以韩国《个人信息保护法》第15条第1款第4项规定的订立或履行合同为依据。",
+              "我们还会使用最少必要信息完成删除请求，并防止与原 UID 关联的数据被重新创建。需要单独同意的处理，仅在告知并获得同意的范围内进行。",
+              "Android 广告 SDK 将上述信息用于广告、广告相关分析和防欺诈。当前 Android 游戏为所有用户关闭广告个性化后再请求广告。游戏使用 Google User Messaging Platform（UMP）提供必要的隐私提示及广告选择，并在需要同意时于请求广告前进行相应处理。同意游戏使用条款不替代广告相关数据处理所需的任何单独同意。",
+              "非个性化广告不意味着不处理数据：SDK 仍可能处理上述 IP 地址、标识符、互动信息和诊断信息。根据您的选择及服务可用性，可能显示非个性化或受限广告，也可能无法提供广告。不主动开始激励广告不会影响普通游戏玩法。"
+            ]
+          },
+          {
+            "heading": "5. 服务提供方与信息披露",
+            "paragraphs": [
+              "账号验证及云存储使用 Google 的 Firebase Authentication 和 Cloud Firestore。可选的 Play Games 关联和只读 Play Billing 查询使用相应 Google 服务。Google 相关隐私说明：https://firebase.google.com/support/privacy 和 https://policies.google.com/privacy。Firebase 隐私联系渠道：https://firebase.google.com/support/troubleshooter/contact。",
+              "Firebase Authentication 为保障安全及防止滥用，会处理 IP 地址和用户代理等技术信息。网站托管和 Google 服务也可能处理服务提供及安全所需的请求时间、IP 地址、设备或浏览器信息。游客模式并不意味着停止网络信息处理或上述 Android 广告 SDK 的处理。",
+              "Android 横幅和激励广告使用 Google AdMob 及 Google Mobile Ads SDK；相关隐私提示和选择由 UMP 管理。Google 按本政策及其官方说明处理信息：https://policies.google.com/privacy 和 https://policies.google.com/technologies/partner-sites。SDK 数据披露说明：https://developers.google.com/admob/android/privacy/play-data-disclosure。如需其他披露，将确认法律依据，并在法律要求时事先取得您的同意。"
+            ]
+          },
+          {
+            "heading": "6. 境外处理",
+            "paragraphs": [
+              "接收服务提供方：Google 的 Firebase 服务。隐私说明及联系方式见第5节的 Firebase 官方页面。接收国家：美国。Firebase Authentication 在美国处理数据；本游戏的 Cloud Firestore 存储位置为美国多区域 nam5。",
+              "传输的信息：Firebase Authentication 所需的 UID、电子邮箱、显示名称、身份验证信息及相关技术信息；以及 Cloud Firestore 中保存的 UID 和第2节列明的游戏进度与同步信息。目的：账号验证和管理、安全，以及您请求的云端保存与恢复。",
+              "传输时间和方式：在登录、刷新身份验证、关联账号、保存、读取和请求删除时，通过互联网以 HTTPS 传输。保留和使用期限见第7节，其中包括 Firebase 身份验证信息的删除周期。",
+              "上述境外受托处理与存储是履行您请求的账号和云存档服务合同所必需的，相关信息依据韩国《个人信息保护法》第28条之8第1款第3项公开。您可以不登录并选择游客模式，以拒绝账号和云存档所需的传输。如果已登录，可以退出登录以停止后续同步，并通过删除账号或发送邮件请求删除已保存的信息。这样将无法使用跨设备云端保存和恢复功能。",
+              "上述账号及云存档传输说明不涵盖 Android 广告的所有处理。根据第5节链接中的 Google 隐私说明，Google 可能在您所在国家以外的服务器上处理第2节所述广告相关信息。退出登录或选择游客模式会停止账号同步，但本身不会停止广告相关处理。广告相关告知及所需同意独立于账号和云存档服务合同。"
+            ]
+          },
+          {
+            "heading": "7. 保留期限与删除",
+            "paragraphs": [
+              "账号及云端进度信息在提供该账号期间保留。删除账号时，会启动进度信息和身份验证账号的删除。为完成删除及防止与原 UID 关联的数据被重新创建，所需的最少 UID 关联信息在账号删除后最多保留30天；如更早实现该目的，将及时删除。保留期届满的电子信息将被删除，并采取措施防止恢复或重新生成。",
+              "Google 表示，Firebase Authentication 会保留已记录的 IP 地址数周。其他身份验证信息在运营者启动对应用户删除后，最长180天内从 Google 的运行和备份系统中移除。此服务提供方的删除周期不同于运营者对游戏数据设定的30天上限。",
+              "设备上的游客存档、设置和条款同意记录可能保留至您删除它们，或清除应用或浏览器数据时。客服信息在答复及相关处理完成且不再需要后，将及时删除。",
+              "Android 的待处理奖励回执会保留在设备上，直到游戏确认已处理，或通过重置进度、删除账号、明确选择替换进度而清除相应待处理奖励。仅退出登录时，会保留待处理记录，以便该账号之后恢复。清除应用数据也会删除这些设备记录。奖励记录及等待时间信息遵循其所属游戏数据的保存和删除规则。Google 广告数据适用 https://policies.google.com/privacy 和 https://policies.google.com/technologies/ads 中说明的 Google 保留及删除规则；游戏 UID 信息的30天保留上限不适用于 Google 广告数据。"
+            ]
+          },
+          {
+            "heading": "8. 重置与删除的范围",
+            "paragraphs": [
+              "重置进度会清除游戏进度，但保留登录账号、语言、国家、音量等设备设置以及条款同意记录。您可以在进度选择界面选择并重新上传其他设备上保留的本人重置前进度。",
+              "删除账号是删除该账号的云端进度、当前设备上的本地副本以及 Firebase Authentication 账号的流程，不会删除您的 Google 账号。如发生网络错误或需要重新验证身份，游戏可能提示尚待完成的步骤。",
+              "无法远程清除其他设备上的所有离线副本及您另行制作的存档副本。请在相关设备或文件所在位置自行删除。如需同时清除独立于账号的设备设置和条款同意记录，可以清除应用或浏览器存储。",
+              "删除游戏账号不会自动删除 Google 的广告记录或撤回广告相关选择。请使用可用的广告隐私选项及 Google 隐私控制功能进行相关操作。"
+            ]
+          },
+          {
+            "heading": "9. 用户与法定代理人的权利",
+            "paragraphs": [
+              "您可以发送邮件至 hyunbae402@gmail.com，行使适用法律规定的查阅、更正、删除、停止处理或撤回同意等权利，也可以使用游戏内删除账号功能。我们可能请求验证您是否有权提出该请求所需的最少信息，并依法告知处理结果或限制理由。",
+              "在 Android 上，UMP 提供隐私选项时，游戏设置中会显示广告隐私选项入口。您可以通过该入口查看或更改选择，并在提供撤回选项时撤回同意。Android 设置还提供重置或删除广告 ID 的功能。这些控制不一定会停止所有技术数据处理；详情请参阅第5节的 Google 说明。",
+              "法定代理人可以行使儿童的个人信息权利。依韩国法律，处理未满14周岁儿童的个人信息如需取得同意，则须取得并核实法定代理人的同意。如您认为儿童信息在缺少必要同意的情况下被处理，请通过上述邮箱请求删除或采取其他适当措施。",
+              "还可通过韩国个人信息保护门户 https://www.privacy.go.kr 查询隐私咨询和举报渠道，或通过个人信息纠纷调解委员会 https://www.kopico.go.kr 查询争议调解方式。"
+            ]
+          },
+          {
+            "heading": "10. 保护措施与政策变更",
+            "paragraphs": [
+              "与账号及存档服务器通信时使用 HTTPS。运营者将个人信息访问限制在必要范围，并管理身份验证和存储访问控制，以保护个人信息。",
+              "如处理目的、信息种类、服务提供方或境外处理等重要内容发生变化，将在游戏中公布修订内容及生效日期，并在法律要求时取得额外同意。"
+            ]
+          }
+        ]
+      },
+      "ja": {
+        "title": "Fantasy Random Defense プライバシーポリシー",
+        "sections": [
+          {
+            "heading": "1. 運営者と個人情報の問い合わせ先",
+            "paragraphs": [
+              "Fantasy Random Defense の運営者および個人情報保護担当者は hyunbbai です。個人情報に関するお問い合わせ・権利行使：hyunbae402@gmail.com。施行日：2026年10月9日。",
+              "本ポリシーは、アカウント、保存、Android の広告、および関連するゲーム機能で扱う情報を説明します。本ポリシーの確認や利用規約への同意は、広告などの処理について法令上必要な別個の同意に代わるものではありません。"
+            ]
+          },
+          {
+            "heading": "2. 取り扱う情報と取得方法",
+            "paragraphs": [
+              "Google ログイン時に、Firebase Authentication を通じてアカウント識別子（UID）、メールアドレス、表示名、認証トークンを処理します。対応環境で任意の Google Play Games 連携を行うと、ログイン連携情報が同じゲーム UID に関連付けられます。ゲームが Google のパスワードを直接取得することはありません。",
+              "アカウント利用時は、進行状況、ダイヤモンドの残高・増減履歴、強化状態、ゲーム記録、保存バージョンなどの同期情報を UID と関連付けて Cloud Firestore に保存します。ログインや保存に必要な情報は、Google ログインやゲームの利用を通じて提供・生成されます。",
+              "Android の Google Mobile Ads SDK は、おおよその位置の推定に使われる場合がある IP アドレス、アプリ起動・タップ・広告閲覧などのアプリや広告の操作情報、性能・診断情報、Android 広告 ID、アプリセット ID、および該当する場合は端末にログイン中のアカウントに関連するその他の識別子を取得・共有します。実際の取得は、適用される設定や識別子の利用可否によって異なります。ゲスト利用中にもこれらの処理が行われる場合があります。",
+              "メールでお問い合わせいただく場合、送信元のメールアドレス、問い合わせ内容など、ご提供いただいた情報を問題解決に使用します。パスワードや認証トークンは送らないでください。"
+            ]
+          },
+          {
+            "heading": "3. 端末内の保存と国設定",
+            "paragraphs": [
+              "ゲストの進行状況とアカウントのローカル保存コピーは、端末のファイルまたはブラウザーの IndexedDB に保存します。言語、選択した国、音量などの端末設定と、利用規約に同意したバージョン・時刻は端末に保存し、ゲームのクラウド上の進行状況には含めません。",
+              "Google Play の価格照会に対応する環境では、Play Billing が返す価格と国の情報を現在のセッションで使用します。国設定のために別の外部 IP 照会サービスを呼び出すことはありません。選択した国によって法的な管轄や広告への同意要件が決まるわけではありません。これとは別に、広告 SDK が IP アドレスからおおよその位置を推定する場合があります。",
+              "UMP は広告に関するプライバシーの選択を端末に保存し、広告リクエストには対応する同意情報が含まれる場合があります。ゲームは報酬の管理と重複付与の防止のため、リワード広告の付与履歴と待機時間の情報を進行情報に保存し、アカウントの進行情報は既存のクラウド保存機能で同期される場合があります。これとは別に、Android の広告連携機能は、元の値を直接示さないハッシュ化した保存範囲の識別子、ランダムなリクエスト識別子、報酬獲得時刻を含む未処理の報酬受信記録を端末内にのみ保存します。この記録にはメールアドレスや元の Firebase UID を含めず、それらの値を広告報酬の検証データとして送信しません。この記録は SDK コールバックの受信記録であり、サーバー側の報酬検証結果ではありません。",
+              "ブラウザーのサイトデータやアプリデータを消去すると、ローカル保存情報も失われる場合があります。保存を拒否すると、進行状況や設定を正常に保持できないことがあります。"
+            ]
+          },
+          {
+            "heading": "4. 利用目的と法的根拠",
+            "paragraphs": [
+              "アカウントの識別・ログイン、任意のアカウント連携、進行状況の保存・復元・同期、関連する問い合わせ対応のため、必要な情報を処理します。利用者が求めたアカウント・クラウド保存サービスに必要な処理は、韓国の個人情報保護法第15条第1項第4号の契約締結・履行を根拠とします。",
+              "削除依頼の完了と、以前の UID に関連するデータの再作成防止にも、必要最小限の情報を使用します。別途同意が必要な処理は、その内容を案内し、同意を得た範囲でのみ行います。",
+              "Android の広告 SDK は上記の情報を広告配信、広告関連の分析、不正防止に利用します。現在の Android 版は、すべての利用者について広告のパーソナライズを無効にして広告をリクエストします。ゲームは Google User Messaging Platform（UMP）で必要なプライバシー案内と広告に関する選択肢を提供し、同意が必要な場合は広告をリクエストする前に対応します。ゲームの利用規約への同意は、広告関連の情報処理について必要な別個の同意に代わるものではありません。",
+              "非パーソナライズ広告でも、情報が一切処理されないわけではありません。SDK は上記の IP アドレス、識別子、操作情報、診断情報を引き続き処理する場合があります。選択内容やサービスの提供状況により、非パーソナライズ広告や制限付き広告が表示されるか、広告を利用できない場合があります。リワード広告を開始しなくても、通常のゲームプレイは利用できます。"
+            ]
+          },
+          {
+            "heading": "5. サービス提供者と情報提供",
+            "paragraphs": [
+              "アカウント認証とクラウド保存には、Google の Firebase Authentication と Cloud Firestore を利用します。任意の Play Games 連携と読み取り専用の Play Billing 照会には、対応する Google サービスを利用します。Google の関連する個人情報案内：https://firebase.google.com/support/privacy および https://policies.google.com/privacy。Firebase の個人情報問い合わせ先：https://firebase.google.com/support/troubleshooter/contact。",
+              "Firebase Authentication は、セキュリティと不正利用防止のため、IP アドレスやユーザーエージェントなどの技術情報を処理します。ウェブホスティングや Google サービスでも、提供・セキュリティに必要なリクエスト時刻、IP アドレス、端末・ブラウザー情報などが処理される場合があります。ゲスト利用でも、ネットワーク情報の処理や上記の Android 広告 SDK による処理がなくなるわけではありません。",
+              "Android のバナー広告とリワード広告には Google AdMob と Google Mobile Ads SDK を利用し、関連するプライバシー案内と選択肢には UMP を利用します。Google は本ポリシーおよび以下の公式案内に従って情報を処理します：https://policies.google.com/privacy および https://policies.google.com/technologies/partner-sites。SDK のデータ開示案内：https://developers.google.com/admob/android/privacy/play-data-disclosure。その他の提供が必要な場合は法的根拠を確認し、同意が必要な場合は事前に同意を得ます。"
+            ]
+          },
+          {
+            "heading": "6. 国外での処理",
+            "paragraphs": [
+              "受領するサービス提供者：Google の Firebase サービス。個人情報の案内と連絡先は、第5項の Firebase 公式ページで確認できます。移転先の国：米国。Firebase Authentication は米国で処理され、本ゲームの Cloud Firestore の保存先は米国マルチリージョン nam5 です。",
+              "移転する情報：Firebase Authentication に必要な UID、メールアドレス、表示名、認証情報および関連する技術情報と、Cloud Firestore に保存する UID および第2項の進行・同期情報。目的：アカウント認証・管理、セキュリティ、および利用者が求めたクラウド保存・復元。",
+              "時期と方法：ログイン、認証の更新、アカウント連携、保存・読み込み、削除依頼の際、インターネット経由で HTTPS により送信します。保存・利用期間は第7項のとおりで、Firebase の認証情報の削除期間も適用されます。",
+              "この国外での委託処理・保存は、利用者が求めたアカウント・クラウド保存契約の履行に必要なものであり、韓国の個人情報保護法第28条の8第1項第3号に基づいて詳細を公開します。ログインせずゲストを選ぶことで、アカウント・クラウド保存のための移転を拒否できます。利用中の場合は、ログアウトして追加の同期を止め、アカウント削除またはメールで保存情報の削除を求めることができます。その場合、端末間のクラウド保存・復元は利用できません。",
+              "上記のアカウント・クラウド保存の移転説明は、Android 広告に関するすべての処理を含むものではありません。Google は、第5項の Google の個人情報案内に従い、第2項の広告関連情報を利用者の国以外にあるサーバーで処理する場合があります。ログアウトやゲスト利用によりアカウントの同期は停止しますが、それだけで広告関連の処理は停止しません。広告に関する案内と必要な同意は、アカウント・クラウド保存の契約とは別です。"
+            ]
+          },
+          {
+            "heading": "7. 保存期間と消去",
+            "paragraphs": [
+              "アカウントとクラウド上の進行情報は、そのアカウントを提供する間、保存します。アカウント削除時には、進行情報と認証アカウントの削除を進めます。削除処理の完了と、以前の UID に関連するデータの再作成防止に必要な最小限の UID 関連情報は、アカウント削除後、最大30日間のみ保存し、目的を先に達成した場合は遅滞なく消去します。保存期間が終了した電子情報は、復元・再生成を防ぐ措置を講じて削除します。",
+              "Google の案内では、Firebase Authentication は記録した IP アドレスを数週間保持します。その他の認証情報は、運営者が対象ユーザーの削除を開始してから最大180日以内に Google の稼働・バックアップシステムから削除されます。この提供者側の削除期間は、運営者のゲームデータに対する30日間の上限とは別です。",
+              "端末のゲスト保存、設定、規約同意記録は、利用者が削除するか、アプリ・ブラウザーのデータを消去するまで残る場合があります。問い合わせ情報は、回答と関連対応が完了して不要になれば遅滞なく消去します。",
+              "Android の未処理の報酬受信記録は、ゲームが処理を確認するか、進行状況のリセット、アカウント削除、明示的な進行情報の置き換え選択により該当する未処理の報酬を取り消すまで端末に残ります。ログアウトだけでは、そのアカウントで後から復旧できるよう未処理の記録を保持します。アプリデータを消去すると、これらの端末内の記録も削除されます。報酬履歴と待機時間の情報は、その情報を含むゲームデータの保存・削除基準に従います。Google の広告データには、https://policies.google.com/privacy および https://policies.google.com/technologies/ads に記載された Google の保存・削除基準が適用されます。ゲームの UID 情報に対する30日間の保存上限は、Google の広告データには適用されません。"
+            ]
+          },
+          {
+            "heading": "8. リセットと削除の範囲",
+            "paragraphs": [
+              "進行状況のリセットではゲームの進行情報を消去しますが、ログインアカウント、言語・国・音量などの端末設定、規約同意記録は維持します。進行状況の選択画面で、他の端末に残る自分のリセット前の進行状況を選び、再度アップロードできます。",
+              "アカウント削除は、対象アカウントのクラウド上の進行情報、現在の端末上のローカルコピー、Firebase Authentication のアカウントを削除する手続きであり、Google アカウント自体は削除しません。ネットワーク障害や再認証が必要な場合、残りの手順がゲーム内に表示されることがあります。",
+              "他の端末のオフラインコピーや利用者が別途作成した保存コピーをすべて遠隔で削除することはできません。該当する端末やファイルの保存場所で削除してください。アカウントとは別の端末設定・規約同意記録も消す場合は、アプリまたはブラウザーの保存データを消去できます。",
+              "ゲームアカウントを削除しても、Google の広告記録が削除されたり、広告に関する選択が自動的に撤回されたりすることはありません。これらについては、利用可能な広告のプライバシー設定や Google のプライバシー管理機能をご利用ください。"
+            ]
+          },
+          {
+            "heading": "9. 利用者と法定代理人の権利",
+            "paragraphs": [
+              "開示、訂正、削除、処理停止、同意の撤回など、適用法令上の権利は hyunbae402@gmail.com へ請求できます。アカウント削除はゲーム内でも行えます。請求権限の確認に必要な最小限の情報をお願いすることがあり、法令に従って処理結果や制限理由を案内します。",
+              "Android では、UMP がプライバシーの選択機能を提供する場合、ゲームの設定に広告のプライバシー設定への入口を表示します。ここで選択内容を確認・変更し、対応する場合は同意を撤回できます。Android の設定から広告 ID をリセット・削除することもできます。これらの操作だけで、すべての技術情報の処理が停止するとは限りません。詳しくは第5項の Google の案内をご確認ください。",
+              "法定代理人は、子どもの個人情報に関する権利を行使できます。韓国法上、14歳未満の子どもの個人情報の処理に同意が必要な場合は、法定代理人の同意とその確認が必要です。必要な同意なく子どもの情報が処理されたと思われる場合は、上記メールに削除などの適切な対応を求めてください。",
+              "韓国の個人情報保護ポータル https://www.privacy.go.kr で相談・申告先を、個人情報紛争調停委員会 https://www.kopico.go.kr で紛争調停の案内を確認することもできます。"
+            ]
+          },
+          {
+            "heading": "10. 保護措置とポリシーの変更",
+            "paragraphs": [
+              "アカウント・保存サーバーとの通信には HTTPS を使用します。運営者は個人情報へのアクセスを必要な範囲に制限し、認証と保存先のアクセス制御を管理して個人情報を保護します。",
+              "目的、情報の種類、提供者、国外処理などの重要な内容を変更する場合は、改定内容と施行日をゲーム内で案内し、法令上必要な追加の同意を得ます。"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

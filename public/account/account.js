@@ -1,7 +1,7 @@
 /* 인증·확인 상태는 이 탭의 메모리에서만 관리한다. 토큰과 서버 응답은 기록하지 않는다. */
 (() => {
   "use strict";
-  // 언어 선택은 탭 메모리에서만 유지하며 새 페이지는 항상 영어로 시작한다.
+  // 유효한 문서 복귀 언어만 받으며, 그 외 새 페이지는 영어로 시작한다. 선택은 탭 메모리에만 둔다.
   const MESSAGES = {
     en: {
       skipLink: "Skip to content",
@@ -24,7 +24,7 @@
         "Your Google account, Google Play Games account, guest records, other game accounts and device settings.",
       retainedTitle: "Minimal record retained",
       retainedCopy:
-        "Your account ID (UID) and a deletion marker (schema version, deletion flag and time) remain on the server to stop old devices from uploading progress again. This record has no automatic expiry.",
+        "Minimum UID-linked information needed to complete deletion and prevent recreation of data associated with the former account is retained for no more than 30 days after account deletion. It is disposed of without delay if that purpose is met sooner.",
       deviceTitle: "Saved data on your devices",
       deviceCopy:
         "Close the game on other devices and browser tabs first. This page cannot remove local game files. The game blocks syncing for an account once it confirms that the account was deleted, but local records may remain.",
@@ -71,6 +71,9 @@
       retryWarning:
         "Progress may already be deleted. Do not refresh or start a new sign-in. Use this page to check the remaining steps with the same account.",
       footer: "Account management",
+      termsLink: "Terms of Service",
+      privacyLink: "Privacy Policy",
+      contactLabel: "Contact",
       preparingSignIn: "Preparing sign-in…",
       clearingSignIn: "Clearing sign-in details from this tab…",
       connectionUnavailable:
@@ -140,7 +143,7 @@
         "Google 계정, Google Play Games 계정 자체, 게스트 기록, 다른 게임 계정 및 기기 설정",
       retainedTitle: "최소 기록 보관",
       retainedCopy:
-        "이전 기기가 진행을 다시 올리지 못하도록 계정 식별자(UID)와 삭제 표식(스키마 버전·삭제 여부·삭제 시각)은 서버에 남습니다. 이 최소 기록에는 자동 삭제 기한이 없습니다.",
+        "삭제 처리 완료와 이전 계정에 연결된 데이터의 재생성 방지에 필요한 최소 UID 연계 정보는 계정 삭제 후 최대 30일까지만 보유합니다. 목적이 먼저 달성되면 지체 없이 파기합니다.",
       deviceTitle: "기기에 남는 저장 데이터",
       deviceCopy:
         "먼저 다른 기기와 브라우저 탭에서 게임을 닫아 주세요. 이 페이지는 로컬 게임 파일을 지우지 않습니다. 게임이 삭제 상태를 확인하면 해당 계정의 동기화를 차단하지만, 로컬 기록은 계속 남을 수 있습니다.",
@@ -186,6 +189,9 @@
       retryWarning:
         "진행 기록은 이미 삭제되었을 수 있습니다. 새로고침하거나 새로 로그인하지 말고, 이 화면에서 같은 계정으로 남은 단계를 확인해 주세요.",
       footer: "계정 관리",
+      termsLink: "이용약관",
+      privacyLink: "개인정보 처리방침",
+      contactLabel: "문의",
       preparingSignIn: "로그인 연결을 준비하고 있습니다.",
       clearingSignIn: "이 탭의 로그인 정보를 정리하고 있습니다.",
       connectionUnavailable:
@@ -250,7 +256,7 @@
         "Google 账号、Google Play Games 账号本身、游客记录、其他游戏账号及设备设置。",
       retainedTitle: "保留的最少记录",
       retainedCopy:
-        "服务器会保留账号 ID（UID）和删除标记（架构版本、删除状态及时间），防止旧设备重新上传进度。这些记录没有自动删除期限。",
+        "为完成删除及防止与原账号关联的数据被重新创建，所需的最少 UID 关联信息在账号删除后最多保留30天。如更早实现该目的，将及时删除。",
       deviceTitle: "设备上的存档",
       deviceCopy:
         "请先关闭其他设备和浏览器标签页中的游戏。此页面无法删除本地游戏文件。游戏确认账号已删除后，会阻止该账号同步，但本地记录仍可能保留。",
@@ -294,6 +300,9 @@
       retryWarning:
         "进度可能已被删除。请勿刷新或重新发起登录。请在此页面使用同一账号检查剩余步骤。",
       footer: "账号管理",
+      termsLink: "服务条款",
+      privacyLink: "隐私政策",
+      contactLabel: "联系",
       preparingSignIn: "正在准备登录…",
       clearingSignIn: "正在清除此标签页的登录信息…",
       connectionUnavailable:
@@ -352,7 +361,7 @@
         "Google アカウント、Google Play Games アカウント自体、ゲストの記録、他のゲームアカウント、端末の設定。",
       retainedTitle: "保持される最小限の記録",
       retainedCopy:
-        "古い端末から進行データが再送信されないよう、アカウント ID（UID）と削除マーカー（スキーマのバージョン、削除フラグ、削除時刻）はサーバーに残ります。この記録に自動削除期限はありません。",
+        "削除処理の完了と、以前のアカウントに関連するデータの再作成防止に必要な最小限の UID 関連情報は、アカウント削除後、最大30日間のみ保存します。目的を先に達成した場合は遅滞なく消去します。",
       deviceTitle: "端末に保存されたデータ",
       deviceCopy:
         "先に、他の端末やブラウザーのタブでゲームを閉じてください。このページでは端末内のゲームファイルを削除できません。ゲームがアカウントの削除を確認すると同期を停止しますが、端末内の記録は残る場合があります。",
@@ -400,6 +409,9 @@
       retryWarning:
         "進行データはすでに削除されている可能性があります。再読み込みや新たなログインは行わず、このページで同じアカウントを使って残りの手順を確認してください。",
       footer: "アカウント管理",
+      termsLink: "利用規約",
+      privacyLink: "プライバシーポリシー",
+      contactLabel: "お問い合わせ",
       preparingSignIn: "ログインを準備しています。",
       clearingSignIn: "このタブのログイン情報を消去しています。",
       connectionUnavailable:
@@ -485,7 +497,10 @@
       "retry-warning",
     ].map((id) => [id, byId(id)]),
   );
-  let language = "en";
+  const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
+  const queryLanguages = { en: "en", ko: "ko", zh_CN: "zh-CN", ja: "ja" };
+  let language = Object.hasOwn(queryLanguages, requestedLanguage)
+    ? queryLanguages[requestedLanguage] : "en";
   let statusKeys = ["preparingSignIn"];
   const gameName = document.body.dataset.gameName;
   let identity = null;
@@ -538,6 +553,13 @@
         "aria-label",
         translate(element.dataset.i18nAriaLabel),
       );
+    }
+    const documentLanguage = language === "zh-CN" ? "zh_CN" : language;
+    for (const link of document.querySelectorAll(".legal-link")) {
+      const kind = link.dataset.document;
+      if (kind === "terms" || kind === "privacy") {
+        link.href = `../${kind}/?lang=${encodeURIComponent(documentLanguage)}`;
+      }
     }
     // 문구만 갱신한다. UID·동의·입력·삭제 상태는 언어 변경으로 바꾸지 않는다.
     ui.status.textContent = statusKeys.map(translate).join(" ");
@@ -1004,7 +1026,7 @@
   ui["delete-form"].addEventListener("submit", deleteAccount);
   ui.consent.addEventListener("change", render);
   ui.confirmation.addEventListener("input", render);
-  for (const link of document.querySelectorAll(".game-link")) {
+  for (const link of document.querySelectorAll(".game-link, .legal-link, .contact-link")) {
     link.addEventListener("click", (event) => {
       if (!complete && (busy || irreversible)) {
         event.preventDefault();
@@ -1021,3 +1043,4 @@
   renderLanguage();
   void waitForConnection();
 })();
+
