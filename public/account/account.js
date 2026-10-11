@@ -35,7 +35,7 @@
       processConfirm:
         "Confirm deletion, then verify the same Google account again.",
       processServer:
-        "We replace server progress with a deletion marker and read it back to confirm.",
+        "We confirm a deletion marker, then remove the current game wallet, upgrades, ledger, requests and runs before deleting sign-in. Any legally required records of future purchases would be handled separately.",
       processAuth: "We then delete the game’s Firebase sign-in account.",
       processRetry:
         "Deleted progress cannot be restored. If the last step fails, you can retry the remaining steps with the same account.",
@@ -152,7 +152,7 @@
       processTitle: "삭제 진행 순서",
       processSignIn: "게임에서 사용한 Google 계정으로 로그인합니다.",
       processConfirm: "삭제에 동의한 뒤 같은 Google 계정으로 재인증합니다.",
-      processServer: "서버 진행을 삭제 표식으로 바꾸고 다시 조회해 확인합니다.",
+      processServer: "삭제 표식을 확인한 뒤 현재 게임 지갑·강화·원장·요청·전투 기록을 정리하고 로그인 계정을 삭제합니다. 향후 구매의 법정 보존 기록은 별도로 처리합니다.",
       processAuth: "그다음 게임의 Firebase 로그인 계정을 삭제합니다.",
       processRetry:
         "삭제된 진행은 복구할 수 없습니다. 마지막 단계가 실패하면 같은 계정으로 남은 단계를 재시도할 수 있습니다.",
@@ -265,7 +265,7 @@
       processTitle: "删除流程",
       processSignIn: "使用您在游戏中使用的 Google 账号登录。",
       processConfirm: "确认删除后，再次验证同一个 Google 账号。",
-      processServer: "将服务器上的进度替换为删除标记，并重新读取以确认。",
+      processServer: "确认删除标记后，先清理当前游戏的钱包、强化、账本、请求和对局记录，再删除登录账号。未来购买的法定保留记录将另行处理。",
       processAuth: "然后删除游戏的 Firebase 登录账号。",
       processRetry:
         "已删除的进度无法恢复。如果最后一步失败，您可以使用同一账号重试剩余步骤。",
@@ -371,7 +371,7 @@
       processSignIn: "ゲームで使用している Google アカウントでログインします。",
       processConfirm: "削除に同意し、同じ Google アカウントで再認証します。",
       processServer:
-        "サーバーの進行データを削除マーカーに置き換え、再取得して確認します。",
+        "削除マーカーを確認後、現在のゲームの財布・強化・台帳・リクエスト・戦闘記録を整理してからログインアカウントを削除します。将来の購入に関する法定保存記録は別途扱います。",
       processAuth: "その後、ゲームの Firebase ログインアカウントを削除します。",
       processRetry:
         "削除した進行データは復元できません。最後の手順に失敗した場合は、同じアカウントで残りの手順を再試行できます。",
@@ -904,6 +904,16 @@
     throw failure("conflict");
   }
 
+  async function deleteEconomy(uid, token) {
+    for (let attempt = 0; attempt < 10; attempt++) {
+      const response = await requestJson(`https://us-central1-${PROJECT_ID}.cloudfunctions.net/economyApi`, token, {data: {operation: "deleteEconomy"}});
+      if (response.status !== 200) throw failure(response.data?.error?.details?.reason || httpError(response.status, response.data));
+      if (response.data?.result?.uid !== uid || typeof response.data.result.economyDeleted !== "boolean") throw failure("invalid_data");
+      if (response.data.result.economyDeleted) return;
+    }
+    throw failure("network");
+  }
+
   async function signIn() {
     if (busy || !available || identity || complete || irreversible) return;
     busy = true;
@@ -953,6 +963,7 @@
       if (identity?.uid !== expectedUid) throw failure("user_mismatch");
       setStatus("deletingProgress");
       await deleteProgression(expectedUid, credentials.id_token);
+      await deleteEconomy(expectedUid, credentials.id_token);
       credentials.id_token = "";
       if (!tombstoneConfirmed || identity?.uid !== expectedUid)
         throw failure("invalid_data");

@@ -10,6 +10,7 @@
   let operation = null,
     clearing = null,
     signOutRequested = false;
+  let authRequestId = "";
   let deletion = null,
     deletedUid = "";
   let initialization = Promise.resolve(),
@@ -32,6 +33,7 @@
       ].includes(error?.code)
     )
       return "not_configured";
+    if (["auth/credential-already-in-use", "auth/email-already-in-use", "auth/account-exists-with-different-credential"].includes(error?.code)) return "account_conflict";
     if (error?.code === "auth/user-mismatch") return "user_mismatch";
     if (error?.code === "auth/requires-recent-login")
       return "recent_login_required";
@@ -65,6 +67,7 @@
     reply(callback, requestId, {
       ok: true,
       uid: user.uid,
+      is_anonymous: user.isAnonymous === true,
       id_token: idToken,
       display_name: user.displayName || "",
       email: user.email || "",
@@ -75,6 +78,10 @@
     });
   }
   globalThis.FirebaseAuth = {
+    localIdentity() {
+      const user = ready ? auth?.currentUser : null;
+      return JSON.stringify(user ? { uid: user.uid, is_anonymous: user.isAnonymous === true, project_id: config.projectId } : {});
+    },
     getProjectId() {
       return typeof config?.projectId === "string" ? config.projectId : "";
     },
@@ -99,8 +106,8 @@
         const user = auth.currentUser;
         restoringUser = user;
         if (
-          !user || user.isAnonymous ||
-          !user.providerData.some((provider) => provider.providerId === "google.com")
+          !user || (!user.isAnonymous &&
+          !user.providerData.some((provider) => provider.providerId === "google.com"))
         ) throw { code: "auth/no-current-user" };
         // 저장된 UID만 신뢰하지 않고 새 토큰을 발급받아 서버 접근을 검증한다.
         await deliver(user, callback, epoch, requestId, true);
@@ -128,34 +135,63 @@
       operation = null;
       busy = false;
     },
-    googleSignIn(requestId, callback) {
+    anonymousSignIn(requestId, callback) {
       if (!ready || busy || clearing) {
-        reply(callback, requestId, { ok: false, error: "not_configured" });
+        reply(callback, requestId, { ok: false, error: ready ? "busy" : "not_configured" });
+        return;
+      }
+      busy = true;
+      authRequestId = requestId;
+      const epoch = ++generation;
+      // 기존 SDK 사용자를 먼저 재사용해 재시도마다 게스트 UID를 만들지 않는다.
+      operation = (async () => {
+        const user = auth.currentUser || (await sdk.signInAnonymously(auth)).user;
+        if (epoch === generation) await deliver(user, callback, epoch, requestId);
+      })().catch((error) => {
+        if (epoch === generation) reply(callback, requestId, { ok: false, error: errorCode(error) });
+      }).finally(() => { busy = false; authRequestId = ""; });
+    },
+    cancelAuth(requestId) {
+      if (authRequestId !== requestId) return;
+      // SDK 변경은 취소할 수 없다. 세션을 지우지 않고 완료까지 새 요청을 막는다.
+      generation++;
+      authRequestId = "";
+    },
+    googleSignIn(requestId, callback) {
+      this.startGoogleSignIn(requestId, callback, false);
+    },
+    googleSignInExisting(requestId, callback) {
+      this.startGoogleSignIn(requestId, callback, true);
+    },
+    startGoogleSignIn(requestId, callback, existing) {
+      if (!ready || busy || clearing) {
+        reply(callback, requestId, { ok: false, error: ready ? "busy" : "not_configured" });
         return;
       }
       deletedUid = "";
       busy = true;
       signOutRequested = false;
+      authRequestId = requestId;
       const epoch = ++generation;
+      const user = auth.currentUser;
+      const linking = !!user?.isAnonymous && !existing;
       const provider = new sdk.GoogleAuthProvider();
       provider.setCustomParameters({ prompt: "select_account" });
-      // popup은 실제 입력 이벤트에서 즉시 연다. 로그아웃 정리가 끝나기 전에는 새 요청을 받지 않는다.
-      operation = sdk
-        .signInWithPopup(auth, provider, sdk.browserPopupRedirectResolver)
+      // popup은 입력 이벤트에서 즉시 열며, 연결 실패·취소 때 게스트 세션을 보존한다.
+      // linkWithPopup은 SDK 내부에서 현재 UID에 Google credential을 연결한다.
+      operation = (linking
+        ? sdk.linkWithPopup(user, provider, sdk.browserPopupRedirectResolver)
+        : sdk.signInWithPopup(auth, provider, sdk.browserPopupRedirectResolver))
         .then(async (result) => {
-          if (epoch !== generation) {
-            await sdk.signOut(auth);
-            return;
-          }
+          if (epoch !== generation) return;
+          if (linking && result.user.uid !== user.uid) throw { code: "auth/user-mismatch" };
           await deliver(result.user, callback, epoch, requestId);
         })
         .catch((error) => {
           if (epoch === generation)
             reply(callback, requestId, { ok: false, error: errorCode(error) });
         })
-        .finally(() => {
-          busy = false;
-        });
+        .finally(() => { busy = false; authRequestId = ""; });
     },
     reauthenticate(requestId, expectedUid, callback) {
       if (!ready) {
@@ -184,6 +220,7 @@
         return;
       }
       busy = true;
+      authRequestId = requestId;
       const epoch = ++generation;
       const provider = new sdk.GoogleAuthProvider();
       provider.setCustomParameters({ prompt: "select_account" });
@@ -195,10 +232,7 @@
           sdk.browserPopupRedirectResolver,
         )
         .then(async (result) => {
-          if (epoch !== generation) {
-            await sdk.signOut(auth);
-            return;
-          }
+          if (epoch !== generation) return;
           if (result.user.uid !== expectedUid || !sameUser(user))
             throw { code: "auth/user-mismatch" };
           await deliver(user, callback, epoch, requestId, true);
@@ -209,6 +243,7 @@
         })
         .finally(() => {
           busy = false;
+          authRequestId = "";
         });
     },
     deleteAccount(requestId, expectedUid, callback) {
