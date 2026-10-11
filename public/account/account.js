@@ -904,16 +904,6 @@
     throw failure("conflict");
   }
 
-  async function deleteEconomy(uid, token) {
-    for (let attempt = 0; attempt < 10; attempt++) {
-      const response = await requestJson(`https://us-central1-${PROJECT_ID}.cloudfunctions.net/economyApi`, token, {data: {operation: "deleteEconomy"}});
-      if (response.status !== 200) throw failure(response.data?.error?.details?.reason || httpError(response.status, response.data));
-      if (response.data?.result?.uid !== uid || typeof response.data.result.economyDeleted !== "boolean") throw failure("invalid_data");
-      if (response.data.result.economyDeleted) return;
-    }
-    throw failure("network");
-  }
-
   async function signIn() {
     if (busy || !available || identity || complete || irreversible) return;
     busy = true;
@@ -963,7 +953,6 @@
       if (identity?.uid !== expectedUid) throw failure("user_mismatch");
       setStatus("deletingProgress");
       await deleteProgression(expectedUid, credentials.id_token);
-      await deleteEconomy(expectedUid, credentials.id_token);
       credentials.id_token = "";
       if (!tombstoneConfirmed || identity?.uid !== expectedUid)
         throw failure("invalid_data");

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "2026-10-11.1",
+  "version": "2026-10-11.2",
   "effective_date": "2026-10-11",
   "documents": {
     "terms": {
@@ -42,8 +42,8 @@
               "다이아몬드 등 게임 재화는 게임 기능을 위한 가상 항목이며 현금이나 예금이 아닙니다. 현재 버전에는 실제 결제 및 구매에 따른 재화 지급 기능이 연결되어 있지 않습니다. Google Play에서 가격과 국가 정보를 조회하여 표시할 수 있으나 이 조회만으로 결제되거나 재화가 지급되지는 않습니다.",
               "게스트가 구매 메뉴를 이용하면 계정 연결을 권장하고 “계정 연동하기”, “게스트로 계속”, “취소”를 선택할 수 있습니다. “게스트로 계속”을 선택해도 현재는 준비 중 안내만 표시하며 결제나 재화 지급은 이루어지지 않습니다.",
               "Android 버전은 AdMob 배너 광고와 광고 개인정보 선택 기능을 사용합니다. 현재 보상형 광고의 서버 검증을 준비 중이므로 광고 보상 지급은 비활성 상태입니다. 전면 광고는 표시하지 않으며 Web 버전에는 광고 SDK가 연결되어 있지 않습니다.",
-              "Android에서는 네트워크 연결 없이도 정상 전투의 다이아몬드 보상과 영구 강화 구매를 기기에 저장합니다. 계정 연결 후 같은 계정의 Web 버전과 공유할 수 있습니다. Web 전투는 별도 서버 재생 검증 경로를 사용하며 현재 운영 보상 검증이 준비 중인 동안에는 온라인 시작도 연습으로 안내하고 다이아몬드를 지급하지 않습니다. Web에서 오프라인으로 시작한 전투는 재접속 후에도 보상 대상으로 전환되지 않습니다. 미확정 Web 보상은 사용할 수 없습니다.",
-              "공유 진행에는 다이아몬드 잔액, 영구 강화 및 관련 달성 정보가 포함됩니다. 기기와 계정 저장이 다르면 사용할 저장을 직접 선택하며, 선택한 공유 진행으로 다른 쪽을 교체하고 잔액을 합산하지 않습니다. 기기에서 작성한 공유 진행은 서버가 정상 플레이를 검증한 기록을 뜻하지 않습니다. Web의 강화 구매에는 온라인 확인이 필요하지만 Android의 강화 구매는 기기에 저장됩니다. 이전 테스트 재화와 강화는 자동으로 이관하거나 합산하지 않습니다. 응답이 오지 않으면 저장 상태를 확인하고 같은 요청을 다시 시도해 주세요. 실제 결제·구매 복원·광고 보상 지급은 제공하지 않습니다.",
+              "Web과 Android 모두 네트워크 연결 없이 정상 전투의 다이아몬드 보상과 영구 강화 구매를 기기에 저장합니다. 계정 연결과 서버 백업에 성공하면 같은 계정의 다른 기기에서 저장된 진행을 불러올 수 있습니다. 진행 중 전투는 기기 전용이며 다른 기기에서 그대로 이어하지 않습니다.",
+              "다이아몬드 잔액, 영구 강화와 달성 정보는 일반 프로필에 포함하여 백업합니다. 기기와 계정 저장이 충돌하면 사용할 전체 진행을 직접 선택하며 잔액을 합산하지 않습니다. 계정 저장을 선택하면 현재 전투를 이어할 수 없습니다. 이 백업은 서버가 정상 플레이나 재화 획득을 검증했다는 뜻이 아닙니다. 이전 보관용 재화와 강화는 자동으로 합산하지 않습니다. 연결 또는 저장에 실패하면 미전송 진행이 남을 수 있으므로 저장 상태를 확인해 주세요. 실제 결제·구매 복원·광고 보상 지급은 제공하지 않습니다.",
               "향후 유료 기능을 제공할 경우 가격, 결제 조건 및 관련 법령에 따른 취소·환불 조건을 구매 전에 별도로 안내합니다. 이 약관은 향후 구매에 대한 동의를 미리 받는 것이 아닙니다."
             ]
           },
@@ -108,8 +108,8 @@
               "Diamonds and other game resources are virtual items for game functions, not cash or deposits. The current version has no live payments or purchase-based resource grants. It may display prices and country information queried from Google Play. Those queries do not charge you or grant resources.",
               "When guests use a purchase menu, the game recommends linking an account and offers “Link account”, “Continue as guest” and “Cancel”. Choosing “Continue as guest” currently only shows a coming-soon notice; it does not initiate payment or grant resources.",
               "The Android version uses AdMob banner ads and advertising privacy choices. Server verification for rewarded ads is being prepared, so ad reward grants are currently disabled. No interstitial ads are shown, and no advertising SDK is integrated into the Web version.",
-              "On Android, diamond rewards from normal battles and permanent upgrade purchases are saved on your device, including without a network connection. After linking an account, you can share them with the Web version using the same account. Web battles use a separate server replay verification process. While production reward verification is being prepared, Web runs started online are presented as practice and grant no diamonds. Web runs started offline do not become reward eligible after reconnection. Unconfirmed Web rewards cannot be used.",
-              "Shared progress includes diamond balances, permanent upgrades and related achievements. If device and account saves differ, you choose which save to use. The selected shared progress replaces the other; balances are not added together. Shared progress written on a device is not a record of play verified by the server. Web upgrade purchases require online confirmation, while Android upgrade purchases are saved on the device. Previous test resources and upgrades are not automatically migrated or added together. If a response is missing, check the save status and retry the same request. Real-money payments, purchase restoration and ad reward grants are not provided.",
+              "On both Web and Android, diamond rewards from normal battles and permanent upgrade purchases are saved on your device without requiring a network connection. After linking an account and successfully backing up, you can load saved progress on another device using the same account. A battle in progress stays on its device and cannot be resumed on another device.",
+              "Diamond balances, permanent upgrades and achievements are backed up as part of the general profile. If device and account saves conflict, you choose which whole profile to use; balances are not added together. Choosing the account save prevents resuming the current battle. This backup does not mean the server verified play or how resources were earned. Previously archived resources and upgrades are not automatically added. A connection or save failure may leave unsent progress, so check the save status. Real-money payments, purchase restoration and ad reward grants are not provided.",
               "If paid features are introduced, prices, payment terms and cancellation or refund terms under applicable law will be explained before purchase. These terms do not provide advance consent to future purchases."
             ]
           },
@@ -174,8 +174,8 @@
               "钻石等游戏资源是用于游戏功能的虚拟物品，不是现金或存款。当前版本尚未接入实际付款或购买后发放资源的功能。游戏可能显示从 Google Play 查询的价格和国家信息，但仅进行查询不会扣款或发放资源。",
               "游客使用购买菜单时，游戏会建议关联账号，并提供“关联账号”“以游客身份继续”和“取消”。当前选择“以游客身份继续”只会显示功能准备中的提示，不会发起付款或发放游戏资源。",
               "Android 版本使用 AdMob 横幅广告及广告隐私选择功能。激励广告的服务器验证准备中，因此当前禁用广告奖励发放。不显示插页式广告，Web 版本也未集成广告 SDK。",
-              "Android 会将正常战斗的钻石奖励和永久强化购买保存在设备上，无网络连接时也可使用。关联账号后，可与同一账号的 Web 版本共享。Web 战斗使用独立的服务器回放验证流程。在运营奖励验证准备期间，Web 在线开始的战斗也作为练习，不发放钻石。Web 离线开始的战斗在重新连接后也不会变为奖励对象。未确认的 Web 奖励无法使用。",
-              "共享进度包括钻石余额、永久强化和相关达成信息。设备与账号存档不同时，由您选择使用哪个存档。所选共享进度将替换另一方，余额不会相加。设备生成的共享进度不表示服务器已验证正常游戏过程。Web 购买强化需要在线确认，Android 购买强化则保存在设备上。旧测试资源和强化不会自动迁移或合并。如果未收到响应，请确认保存状态并重试同一请求。目前不提供实际支付、购买恢复或广告奖励发放。",
+              "Web 和 Android 均可在无网络连接时将正常战斗的钻石奖励和永久强化购买保存在设备上。关联账号并成功备份后，可在其他设备使用同一账号读取保存的进度。进行中的战斗仅保留在本设备，无法在其他设备直接继续。",
+              "钻石余额、永久强化和达成信息作为普通档案的一部分备份。设备与账号存档冲突时，由您选择使用哪一份完整进度，余额不会相加。选择账号存档后无法继续当前战斗。备份不表示服务器验证了游戏过程或资源获取的正当性。旧版保管的资源和强化不会自动合并。连接或保存失败可能留下未上传的进度，请确认保存状态。目前不提供实际支付、购买恢复或广告奖励发放。",
               "如果今后推出付费功能，将在购买前另行说明价格、付款条件以及适用法律规定的取消和退款条件。本条款不构成您对今后购买的预先同意。"
             ]
           },
@@ -240,8 +240,8 @@
               "ダイヤモンドなどのゲーム内資源は、ゲームの機能に使う仮想アイテムであり、現金や預金ではありません。現在のバージョンには、実際の決済や購入に応じた資源の付与機能は組み込まれていません。Google Play から取得した価格や国の情報を表示する場合がありますが、その照会だけで課金や資源の付与は行われません。",
               "ゲストが購入メニューを利用すると、アカウント連携を勧め、「アカウント連携」「ゲストのまま続ける」「キャンセル」を選択できます。現在は「ゲストのまま続ける」を選んでも準備中の案内のみ表示し、決済やゲーム内通貨の付与は行いません。",
               "Android 版では AdMob のバナー広告と広告のプライバシー選択機能を使用します。リワード広告のサーバー検証は準備中のため、現在は広告報酬の付与を無効にしています。インタースティシャル広告は表示せず、Web 版には広告 SDK を組み込んでいません。",
-              "Android では、ネットワーク接続がなくても通常の戦闘のダイヤモンド報酬と永続強化の購入を端末に保存します。アカウント連携後は、同じアカウントの Web 版と共有できます。Web の戦闘は別のサーバー再生検証を使用します。運用環境の報酬検証を準備している間は、Web でオンライン開始した戦闘も練習として案内し、ダイヤモンドを付与しません。Web でオフライン開始した戦闘は、再接続しても報酬対象にはなりません。未確定の Web 報酬は使用できません。",
-              "共有する進行状況には、ダイヤ残高、永続強化、関連する達成情報が含まれます。端末とアカウントのセーブが異なる場合は、使用するセーブを選びます。選んだ共有進行で他方を置き換え、残高は合算しません。端末で作成した共有進行は、サーバーが正常なプレイを検証した記録を意味しません。Web の強化購入にはオンライン確認が必要ですが、Android の強化購入は端末に保存されます。以前のテストの通貨と強化を自動で移行・合算しません。応答が届かない場合は保存状態を確認し、同じリクエストを再試行してください。実際の決済、購入の復元、広告報酬の付与は提供していません。",
+              "Web と Android のどちらも、ネットワーク接続なしで通常の戦闘のダイヤモンド報酬と永続強化の購入を端末に保存します。アカウント連携とバックアップに成功すると、同じアカウントで別の端末から保存済みの進行状況を読み込めます。進行中の戦闘は端末内だけに保存され、別の端末では再開できません。",
+              "ダイヤ残高、永続強化、達成情報は通常のプロフィールに含めてバックアップします。端末とアカウントのセーブが競合した場合は、使用する進行状況全体を選び、残高は合算しません。アカウントのセーブを選ぶと現在の戦闘は再開できません。このバックアップは、サーバーがプレイや通貨獲得の正当性を検証したことを意味しません。以前の保管用通貨と強化は自動で合算しません。接続や保存の失敗により未送信の進行が残る場合があるため、保存状態をご確認ください。実際の決済、購入の復元、広告報酬の付与は提供していません。",
               "今後、有料機能を提供する場合は、価格、決済条件、適用法令に基づく取消し・返金条件を購入前に別途案内します。本規約は将来の購入に対する事前の同意ではありません。"
             ]
           },
@@ -284,9 +284,8 @@
             "heading": "2. 처리하는 정보와 수집 방법",
             "paragraphs": [
               "게스트 이용 시 Firebase Authentication의 익명 인증을 통해 계정 식별자(UID)와 인증 토큰 등 인증정보를 처리합니다. 인증 SDK는 같은 계정을 다시 사용하도록 인증정보를 기기 또는 브라우저에 보관합니다. Google 연결 시 이메일, 표시 이름 및 Google 인증정보도 처리하며 새 연결은 같은 UID에 연결됩니다. 지원 환경에서 선택적으로 Google Play Games를 연결하면 동일한 게임 UID에 로그인 연결 정보가 연계됩니다. 게임은 Google 비밀번호를 직접 수집하지 않습니다.",
-              "게스트와 Google 연결 계정 모두 진행도, 다이아몬드 잔액과 변동 내역, 강화 상태, 게임 기록 및 저장 버전 등 일반 프로필의 동기화 정보가 UID와 연결되어 Cloud Firestore에 저장됩니다. 진행 중 전투의 스냅샷은 서버 저장에 포함하지 않습니다. 필요한 정보는 익명 인증, Google 연결 및 게임 이용 과정에서 제공되거나 생성됩니다. 이 백업은 서버가 재화 획득의 정당성이나 구매를 검증했다는 뜻이 아닙니다. 일반 프로필 백업에도 기기 공유 경제의 복사본이 포함됩니다. Android에서 프로필을 선택해 복원하면 기기 경제도 교체될 수 있으며, 서버 경제와의 동기화는 별도로 처리합니다.",
-              "서버 경제 기능은 UID에 연결된 잔액·증감 내역, 영구 강화·관련 달성 정보, 거래 요청 식별자와 처리 결과를 저장합니다. Android 공유 동기화는 기기에서 작성한 잔액·강화·달성 정보와 서버 저장 버전을 비교하여 선택된 상태를 저장하며, 교체 사실과 이전·변경 후 잔액을 기록할 수 있습니다. 이 정보는 정상 플레이가 서버에서 검증되었다는 뜻이 아닙니다. Web 온라인 전투는 전투 식별자, seed, 콘텐츠 버전, 시작 강화와 발급 시각을 저장하며 종료 청구의 결과·웨이브·처치 요약은 미검증 주장으로 별도 보관할 수 있습니다. 처리 목적은 계정 공유, 거래 처리, 중복 방지, 충돌·오류 복구와 검증 상태 안내입니다. 진행 중 전투 전체 스냅샷을 일반 프로필 백업으로 전송하지 않습니다.",
-              "Web 재생 경로: 온라인 전투 재생 검증을 위해 UID와 판 식별자에 연결된 순서 있는 입력 기록(소환·이동·조합·배속·정지 등), 정수 전투 tick, 프로토콜·엔진 버전, 콘텐츠·재생 해시, 검증 상태와 확정 결과를 추가로 저장할 수 있습니다. 검증은 서버가 발급한 시작 조건에서 입력을 재생하며 클라이언트 전투 스냅샷을 증거로 사용하지 않습니다. 종료 또는 명시적 중도 종료 때 제출하고, 정기 polling 대신 필요한 메뉴 체크포인트나 사용자 요청 때 상태를 확인합니다. 입력 기록이 없는 과거 청구는 소급 검증하지 않습니다. 운영 검증기 확인이 끝나기 전에는 운영 전투 보상 지급을 활성화하지 않습니다.",
+              "진행도, 다이아몬드 잔액과 변동 내역, 강화·달성 정보, 게임 기록과 저장 버전 등 일반 프로필을 기기에 저장하고, 게스트 또는 Google 연결 계정의 UID에 연결하여 Cloud Firestore에 백업합니다. 이 백업은 기기에서 작성한 진행을 보관하며 서버가 정상 플레이나 재화 획득의 정당성을 검증한 기록은 아닙니다. 진행 중 전투의 스냅샷은 서버 백업에 포함하지 않습니다. 필요한 정보는 인증과 게임 이용 과정에서 제공되거나 생성됩니다.",
+              "프로필 백업은 계정 간 구분, 같은 계정의 기기 간 진행 공유, 충돌 확인 및 오류 복구에 사용합니다. 변경된 진행은 저장 체크포인트에서 전송하며 미전송 진행을 기기에 보관할 수 있습니다. 저장이 충돌하면 사용할 전체 프로필을 이용자가 선택합니다. 별도의 서버 경제 거래나 전투 입력 재생 검증을 위해 요청·티켓·입력 기록을 전송하지 않습니다.",
               "Android의 Google Mobile Ads SDK는 대략적인 위치를 추정할 수 있는 IP 주소, 앱 실행·탭·광고 조회 등 앱·광고 상호작용, 성능·진단 정보, Android 광고 ID, 앱 세트 ID 및 해당되는 경우 기기에 로그인된 계정과 관련된 다른 식별자를 수집·공유합니다. 실제 수집은 적용되는 설정과 식별자 사용 가능 여부에 따라 달라집니다. 게스트 이용 중에도 이러한 처리가 발생할 수 있습니다.",
               "이메일로 문의하면 발신 이메일 주소와 문의 내용 등 이용자가 보낸 정보를 문제 해결에 사용합니다. 문의에 비밀번호나 인증 토큰을 보내지 마세요."
             ]
@@ -341,7 +340,7 @@
           {
             "heading": "8. 초기화·삭제의 범위",
             "paragraphs": [
-              "일반 진행 초기화는 게임 기록과 진행 중 전투 등 일반 진행을 지우지만 기기 및 계정의 공유 재화·영구 강화, 로그인 계정, 기기 설정과 약관 동의 기록은 유지합니다. 일반 프로필 백업과 공유 경제 동기화는 별도이며, 공유 경제 충돌에서 사용할 저장을 명시적으로 선택하면 공유 잔액과 강화·달성 정보가 교체될 수 있습니다.",
+              "일반 진행 초기화는 게임 기록과 진행 중 전투 등 일반 진행을 지우지만 다이아몬드·영구 강화, 로그인 계정, 기기 설정과 약관 동의 기록은 유지합니다. 다른 기기의 과거 프로필을 선택해 복원하면 해당 프로필의 잔액·강화·달성 정보도 함께 교체될 수 있습니다.",
               "계정 삭제는 해당 계정의 클라우드 진행 정보와 현재 기기의 해당 계정 로컬 사본 및 Firebase 인증 계정을 삭제하는 절차이며, Google 계정 자체를 삭제하지 않습니다. 네트워크 오류나 재인증이 필요한 경우 화면에 남은 절차가 안내될 수 있습니다.",
               "다른 기기의 오프라인 사본이나 이용자가 별도로 만든 저장 사본을 원격으로 모두 지울 수는 없습니다. 해당 사본은 이용자가 그 기기나 파일에서 삭제해야 합니다. 계정과 별개인 기기 설정·약관 동의 기록까지 지우려면 앱 또는 브라우저의 저장 데이터를 지울 수 있습니다.",
               "게임 계정 삭제만으로 Google의 광고 기록이 삭제되거나 광고 관련 선택이 자동 철회되지는 않습니다. 해당 목적에는 제공되는 광고 개인정보 선택과 Google의 개인정보 관리 기능을 이용해 주세요."
@@ -379,9 +378,8 @@
             "heading": "2. Information and collection methods",
             "paragraphs": [
               "Guest play uses Firebase Authentication anonymous authentication to process an account identifier (UID) and credentials such as authentication tokens. The authentication SDK retains credentials on the device or in the browser to reuse the same account. Google linking additionally processes email, display name and Google authentication information; a new link uses the same UID. Optional Google Play Games linking on supported platforms associates sign-in linking information with the same game UID. The game does not directly collect your Google password.",
-              "For both guests and Google-linked accounts, Cloud Firestore stores general profile information linked to the UID: progress, diamond balances and changes, upgrades, game records and synchronization information such as save versions. Snapshots of battles in progress are excluded from server storage. Necessary information is supplied or generated through anonymous authentication, Google linking and game use. This backup does not mean that the server has verified the legitimacy of resource acquisition or purchases. General profile backups also contain a copy of the device shared economy. Selecting a profile to restore on Android can replace the device economy; synchronization with the server economy is handled separately.",
-              "Server economy features store UID-linked balances and changes, permanent upgrades and related achievements, transaction request identifiers and outcomes. Android sharing compares device-written balances, upgrades and achievements with the server save revision and stores the selected state. It may record the replacement and the balances before and after it. This information does not mean play was verified by the server. Web online runs store a run identifier, seed, content version, starting upgrades and issuance time; submitted results, waves and kill summaries may be kept separately as unverified claims. These records support account sharing, transactions, deduplication, conflict and error recovery, and verification status. A full battle-in-progress snapshot is not sent as a general profile backup.",
-              "Web replay path: For online battle replay verification, the service may additionally store an ordered input history (such as summons, movement, combinations, speed changes and pauses), integer battle ticks, protocol and engine versions, content and replay digests, verification status and confirmed results, linked to the UID and run identifier. Verification replays inputs from the server-issued starting conditions; client battle snapshots are not used as proof. Submission occurs at completion or explicit early termination, with status checks at necessary menu checkpoints or on request rather than periodic polling. Historical claims without input histories are not retroactively verified. Production battle reward grants remain disabled until the verifier is operationally validated.",
+              "General profiles, including progress, diamond balances and changes, upgrades, achievements, game records and save versions, are stored on the device and backed up to Cloud Firestore under the guest or Google-linked account UID. These backups contain device-written progress; they do not establish that the server verified play or resource acquisition. Battle-in-progress snapshots are excluded from server backups. Information is supplied or generated through authentication and gameplay.",
+              "Profile backups support account separation, progress sharing between devices on the same account, conflict detection and error recovery. Changed progress is sent at save checkpoints, and unsent progress may remain on the device. If saves conflict, you choose which whole profile to use. Requests, tickets and input histories are not sent for separate server economy transactions or battle replay verification.",
               "On Android, Google Mobile Ads SDK collects and shares IP addresses (which may indicate general location), app and ad interactions such as launches, taps and views, performance and diagnostic information, Android advertising IDs, app set IDs and, where applicable, other identifiers associated with accounts signed in on the device. Collection depends on applicable settings and available identifiers. This can also occur during guest play.",
               "If you email support, the sender’s email address, message and other information you provide are used to resolve the issue. Do not send passwords or authentication tokens."
             ]
@@ -436,7 +434,7 @@
           {
             "heading": "8. What reset and deletion cover",
             "paragraphs": [
-              "Resetting general progress clears game records and the battle in progress, but preserves shared resources and permanent upgrades on the device and account, the sign-in account, device settings and consent records. General profile backup and shared economy sync are separate. Explicitly choosing a save in a shared economy conflict can replace shared balances, upgrades and achievements.",
+              "Resetting general progress clears game records and the battle in progress but preserves diamonds, permanent upgrades, the sign-in account, device settings and consent records. Choosing an older profile from another device can also replace the balances, upgrades and achievements with those in that profile.",
               "Account deletion removes that account’s cloud progress, local copies on the current device and Firebase Authentication account. It does not delete your Google Account. The game may show remaining steps if a network error occurs or reauthentication is required.",
               "Offline copies on other devices and separate save copies you made cannot all be remotely erased. Delete those copies on the relevant device or from their file location. To also erase device settings and terms-acceptance records that are separate from the account, you can clear app or browser storage.",
               "Deleting the game account does not delete Google’s advertising records or withdraw advertising choices automatically. Use the available advertising privacy options and Google’s privacy controls for those purposes."
@@ -474,9 +472,8 @@
             "heading": "2. 处理的信息与收集方式",
             "paragraphs": [
               "游客使用 Firebase Authentication 的匿名身份验证，处理账号标识符（UID）、身份验证令牌等认证信息。身份验证 SDK 在设备或浏览器中保留认证信息，以重复使用同一账号。关联 Google 时，还会处理电子邮箱、显示名称及 Google 身份验证信息；首次关联使用同一 UID。在支持的平台上选择关联 Google Play Games 时，登录关联信息会与同一游戏 UID 关联。游戏不直接收集您的 Google 密码。",
-              "游客和已关联 Google 的账号均会将与 UID 关联的一般个人档案同步信息保存到 Cloud Firestore，包括进度、钻石余额及变动记录、强化状态、游戏记录和存档版本。服务器存储不包含进行中战斗的快照。所需信息通过匿名身份验证、Google 关联及游戏使用过程提供或生成。这种备份不表示服务器已验证游戏资源获取或购买的合法性。 普通档案备份也包含设备共享经济的副本。在 Android 上选择恢复档案时，设备经济也可能被替换，与服务器经济的同步则单独处理。",
-              "服务器经济功能保存与 UID 关联的余额及变动、永久强化及相关达成信息、交易请求标识符和处理结果。Android 共享同步会核对设备生成的余额、强化、达成信息与服务器存档版本，并保存所选状态，也可能记录替换事实及替换前后的余额。这不表示服务器已验证游戏过程。Web 在线战斗保存战斗标识符、seed、内容版本、初始强化和发放时间；提交的结果、波次及击杀摘要可作为未验证声明另行保存。用途包括账号共享、交易处理、防止重复、冲突与错误恢复以及验证状态提示。进行中战斗的完整快照不会作为普通档案备份上传。",
-              "Web 回放流程：为验证在线战斗回放，服务还可能保存与UID和对局标识关联的有序输入记录（召唤、移动、合成、倍速、暂停等）、整数战斗tick、协议和引擎版本、内容与回放哈希、验证状态及确认结果。验证从服务器发放的初始条件重放输入，不以客户端战斗快照为证据。记录在结束或明确中途结束时提交，仅在必要的菜单检查点或用户请求时查询状态，不定期轮询。没有输入历史的旧申请不会被追溯验证。运营验证器完成确认前，正式服务环境不会启用战斗奖励发放。",
+              "进度、钻石余额及变动、强化、达成信息、游戏记录和存档版本等普通档案保存在设备上，并关联游客或 Google 账号的 UID 备份至 Cloud Firestore。备份保存设备生成的进度，不表示服务器验证了游戏过程或资源获取的正当性。进行中战斗的快照不包含在服务器备份中。相关信息由认证和游戏使用过程提供或生成。",
+              "档案备份用于区分账号、同一账号的不同设备之间的进度共享、冲突确认和错误恢复。变更的进度在保存检查点发送，未上传的进度可保留在设备上。存档冲突时由您选择使用哪一份完整档案。不会为独立的服务器经济交易或战斗回放验证发送请求、战斗标识或输入记录。",
               "在 Android 上，Google Mobile Ads SDK 会收集和共享 IP 地址（可用于估计大致位置）、应用启动、点击和广告观看等应用及广告互动信息、性能和诊断信息、Android 广告 ID、应用集 ID，以及适用时与设备上已登录账号有关的其他标识符。实际收集情况取决于适用设置和可用标识符。游客模式下也可能发生这些处理。",
               "通过邮件咨询时，我们使用发件邮箱、邮件内容及您提供的其他信息解决问题。请勿发送密码或身份验证令牌。"
             ]
@@ -531,7 +528,7 @@
           {
             "heading": "8. 重置与删除的范围",
             "paragraphs": [
-              "重置普通进度会清除游戏记录及进行中的战斗，但保留设备和账号的共享资源、永久强化、登录账号、设备设置及同意记录。普通档案备份与共享经济同步相互独立。在共享经济冲突中明确选择存档时，共享余额、强化和达成信息可能被替换。",
+              "重置普通进度会清除游戏记录及进行中的战斗，但保留钻石、永久强化、登录账号、设备设置及同意记录。选择恢复另一设备上的旧档案时，余额、强化和达成信息也可能一并被替换。",
               "删除账号是删除该账号的云端进度、当前设备上的本地副本以及 Firebase Authentication 账号的流程，不会删除您的 Google 账号。如发生网络错误或需要重新验证身份，游戏可能提示尚待完成的步骤。",
               "无法远程清除其他设备上的所有离线副本及您另行制作的存档副本。请在相关设备或文件所在位置自行删除。如需同时清除独立于账号的设备设置和条款同意记录，可以清除应用或浏览器存储。",
               "删除游戏账号不会自动删除 Google 的广告记录或撤回广告相关选择。请使用可用的广告隐私选项及 Google 隐私控制功能进行相关操作。"
@@ -569,9 +566,8 @@
             "heading": "2. 取り扱う情報と取得方法",
             "paragraphs": [
               "ゲスト利用時は Firebase Authentication の匿名認証により、アカウント識別子（UID）や認証トークンなどの認証情報を処理します。認証 SDK は同じアカウントを再利用するため、端末またはブラウザーに認証情報を保持します。Google 連携時にはメールアドレス、表示名、Google の認証情報も処理し、新規連携では同じ UID を使います。対応環境で任意の Google Play Games 連携を行うと、ログイン連携情報が同じゲーム UID に関連付けられます。ゲームが Google のパスワードを直接取得することはありません。",
-              "ゲストと Google 連携アカウントのいずれも、進行状況、ダイヤモンドの残高・増減履歴、強化状態、ゲーム記録、保存バージョンなど、通常のプロフィールの同期情報を UID と関連付けて Cloud Firestore に保存します。進行中の戦闘のスナップショットはサーバー保存に含めません。必要な情報は匿名認証、Google 連携、ゲーム利用を通じて提供・生成されます。このバックアップは、通貨の獲得や購入の正当性をサーバーが検証したことを意味しません。 通常のプロフィールバックアップにも端末の共有経済のコピーが含まれます。Android で復元するプロフィールを選ぶと端末の経済も置き換わる場合があり、サーバー経済との同期は別に処理します。",
-              "サーバーの経済機能は、UID に関連付けた残高と増減、永続強化と関連する達成情報、取引リクエスト識別子と処理結果を保存します。Android の共有同期は端末で作成した残高・強化・達成情報とサーバーの保存バージョンを照合し、選んだ状態を保存します。置き換えの事実と前後の残高を記録する場合があります。これはサーバーがプレイを検証したことを意味しません。Web のオンライン戦闘では戦闘識別子、seed、コンテンツ版、開始時の強化と発行時刻を保存し、申請された結果・ウェーブ・撃破概要は未検証の申告として別に保存する場合があります。目的はアカウント共有、取引処理、重複防止、競合・エラー復旧と検証状態の案内です。進行中の戦闘の全スナップショットは通常のプロフィールバックアップとして送信しません。",
-              "Web の再生経路：オンライン戦闘の再生検証のため、UIDと戦闘IDに関連付けた順序付き入力履歴（召喚・移動・合成・倍速・一時停止など）、整数の戦闘tick、プロトコル・エンジンのバージョン、コンテンツ・再生ハッシュ、検証状態と確定結果を追加保存する場合があります。検証はサーバーが発行した開始条件から入力を再生し、クライアントの戦闘スナップショットを証拠にはしません。終了または明示的な途中終了時に提出し、定期ポーリングではなく必要なメニューのチェックポイントや利用者の操作時に状態を確認します。入力履歴のない過去の申請は遡及検証しません。運用検証器の確認が完了するまで運用環境での戦闘報酬付与は有効化しません。",
+              "進行状況、ダイヤ残高と増減、強化・達成情報、ゲーム記録、保存バージョンなどの通常のプロフィールを端末に保存し、ゲストまたは Google 連携アカウントの UID に関連付けて Cloud Firestore にバックアップします。これは端末で作成した進行状況の保管であり、サーバーがプレイや通貨獲得の正当性を検証した記録ではありません。進行中の戦闘のスナップショットはサーバーバックアップに含めません。情報は認証やゲーム利用の過程で提供・生成されます。",
+              "プロフィールのバックアップは、アカウントの区分、同じアカウントの端末間共有、競合確認、エラー復旧に使用します。変更した進行状況を保存チェックポイントで送信し、未送信の進行は端末に保持する場合があります。セーブが競合した場合は使用するプロフィール全体を選びます。別途のサーバー経済取引や戦闘入力の再生検証のためにリクエスト・チケット・入力記録を送信しません。",
               "Android の Google Mobile Ads SDK は、おおよその位置の推定に使われる場合がある IP アドレス、アプリ起動・タップ・広告閲覧などのアプリや広告の操作情報、性能・診断情報、Android 広告 ID、アプリセット ID、および該当する場合は端末にログイン中のアカウントに関連するその他の識別子を取得・共有します。実際の取得は、適用される設定や識別子の利用可否によって異なります。ゲスト利用中にもこれらの処理が行われる場合があります。",
               "メールでお問い合わせいただく場合、送信元のメールアドレス、問い合わせ内容など、ご提供いただいた情報を問題解決に使用します。パスワードや認証トークンは送らないでください。"
             ]
@@ -626,7 +622,7 @@
           {
             "heading": "8. リセットと削除の範囲",
             "paragraphs": [
-              "通常の進行状況をリセットするとゲーム記録や進行中の戦闘を消去しますが、端末とアカウントで共有する通貨・永続強化、ログインアカウント、端末設定、同意記録は保持します。通常のプロフィールバックアップと共有経済の同期は別です。共有経済の競合で使用するセーブを明示的に選ぶと、共有残高・強化・達成情報が置き換わる場合があります。",
+              "通常の進行状況をリセットするとゲーム記録や進行中の戦闘を消去しますが、ダイヤモンド、永続強化、ログインアカウント、端末設定、同意記録は保持します。別の端末の古いプロフィールを選んで復元すると、そのプロフィールの残高・強化・達成情報に置き換わる場合があります。",
               "アカウント削除は、対象アカウントのクラウド上の進行情報、現在の端末上のローカルコピー、Firebase Authentication のアカウントを削除する手続きであり、Google アカウント自体は削除しません。ネットワーク障害や再認証が必要な場合、残りの手順がゲーム内に表示されることがあります。",
               "他の端末のオフラインコピーや利用者が別途作成した保存コピーをすべて遠隔で削除することはできません。該当する端末やファイルの保存場所で削除してください。アカウントとは別の端末設定・規約同意記録も消す場合は、アプリまたはブラウザーの保存データを消去できます。",
               "ゲームアカウントを削除しても、Google の広告記録が削除されたり、広告に関する選択が自動的に撤回されたりすることはありません。これらについては、利用可能な広告のプライバシー設定や Google のプライバシー管理機能をご利用ください。"
