@@ -15,6 +15,95 @@
     deletedUid = "";
   let initialization = Promise.resolve(),
     restoration = null;
+  const DEFAULT_APP_NAME = "frd-account";
+  const validAppName = (name) =>
+    typeof name === "string" && /^[A-Za-z0-9_-]{1,96}-account$/.test(name);
+  // 고정 SDK 12.4.0의 키 이름만 조사한다. 인증 본문·토큰을 복사하거나 다른 API 키를 읽지 않는다.
+  const localAuthNames = (prefix) => {
+    const storage = globalThis.localStorage;
+    if (!storage) return { available: false, names: [] };
+    const names = new Set();
+    const length = storage.length;
+    if (length > 10000) throw new Error("auth_storage_unavailable");
+    for (let index = 0; index < length; index++) {
+      const key = storage.key(index);
+      if (typeof key !== "string" || !key.startsWith(prefix)) continue;
+      const name = key.slice(prefix.length);
+      if (validAppName(name)) names.add(name);
+    }
+    return { available: true, names: [...names] };
+  };
+  const indexedAuthNames = (prefix) => new Promise((resolve, reject) => {
+    const database = globalThis.indexedDB;
+    if (!database) {
+      resolve({ available: false, names: [] });
+      return;
+    }
+    let request, connection, transaction, absent = false, settled = false;
+    const finish = (error, names = []) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timeout);
+      if (error && transaction) {
+        try { transaction.abort(); } catch (_) { /* 이미 완료된 읽기 거래다. */ }
+      }
+      if (connection) connection.close();
+      if (error) reject(new Error("auth_storage_unavailable"));
+      else resolve({ available: true, names });
+    };
+    const timeout = setTimeout(() => finish(true), 5000);
+    try {
+      request = database.open("firebaseLocalStorageDb");
+      request.onupgradeneeded = () => {
+        // 없는 DB를 검색 때문에 만들지 않는다. abort 후 onerror에서 부재를 확정한다.
+        absent = true;
+        connection = request.result;
+        try { request.transaction.abort(); } catch (_) { finish(true); }
+      };
+      request.onblocked = () => finish(true);
+      request.onerror = () => finish(!absent);
+      request.onsuccess = () => {
+        connection = request.result;
+        if (settled) { connection.close(); return; }
+        try {
+          if (!connection.objectStoreNames.contains("firebaseLocalStorage")) {
+            finish(true);
+            return;
+          }
+          transaction = connection.transaction("firebaseLocalStorage", "readonly");
+          const names = new Set();
+          let count = 0;
+          const keys = transaction.objectStore("firebaseLocalStorage").openKeyCursor(
+            IDBKeyRange.bound(prefix, prefix + "\uffff"),
+          );
+          keys.onerror = () => finish(true);
+          keys.onsuccess = () => {
+            try {
+              const cursor = keys.result;
+              if (!cursor || settled) return;
+              if (++count > 256) { finish(true); return; }
+              const name = typeof cursor.key === "string" ? cursor.key.slice(prefix.length) : "";
+              if (validAppName(name)) names.add(name);
+              cursor.continue();
+            } catch (_) { finish(true); }
+          };
+          transaction.onabort = () => finish(true);
+          transaction.onerror = () => finish(true);
+          transaction.oncomplete = () => finish(false, [...names]);
+        } catch (_) { finish(true); }
+      };
+    } catch (_) { finish(true); }
+  });
+  async function storedAuthNamespace() {
+    if (typeof config.apiKey !== "string" || !config.apiKey) throw new Error("auth_storage_unavailable");
+    const prefix = `firebase:authUser:${config.apiKey}:`;
+    // 두 저장소에 같은 이름이 있으면 SDK 우선순위에 맡긴다. 다른 이름은 임의 선택하지 않는다.
+    const local = localAuthNames(prefix);
+    const indexed = await indexedAuthNames(prefix);
+    const names = [...new Set([...local.names, ...indexed.names])];
+    if (names.length > 1) throw new Error("auth_storage_ambiguous");
+    return { name: names[0] || DEFAULT_APP_NAME, memoryOnly: !local.available && !indexed.available };
+  }
   const errorCode = (error) => {
     if (
       ["auth/popup-closed-by-user", "auth/cancelled-popup-request"].includes(
@@ -352,9 +441,11 @@
     .then(async ([appSdk, authSdk]) => {
       sdk = authSdk;
       // 같은 브라우저·사이트의 로그인은 SDK 저장소에서 복원한다. 자체 토큰 파일은 만들지 않는다.
-      // 저장소가 차단된 환경은 메모리로 동작하며 popup은 명시적 로그인에서만 연다.
-      auth = sdk.initializeAuth(appSdk.initializeApp(config, "guild-account"), {
-        persistence: [sdk.indexedDBLocalPersistence, sdk.browserLocalPersistence, sdk.inMemoryPersistence],
+      // 저장소 조회 실패를 새 계정으로 대체하지 않는다. API가 모두 없는 환경만 메모리로 시작한다.
+      const selection = await storedAuthNamespace();
+      auth = sdk.initializeAuth(appSdk.initializeApp(config, selection.name), {
+        persistence: selection.memoryOnly ? [sdk.inMemoryPersistence]
+          : [sdk.indexedDBLocalPersistence, sdk.browserLocalPersistence, sdk.inMemoryPersistence],
       });
       await auth.authStateReady();
       if (signOutRequested) await sdk.signOut(auth);
