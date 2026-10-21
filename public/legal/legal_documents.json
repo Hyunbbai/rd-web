@@ -41,9 +41,9 @@
             "paragraphs": [
               "다이아몬드 등 게임 재화는 게임 기능을 위한 가상 항목이며 현금이나 예금이 아닙니다. 현재 버전에는 실제 결제 및 구매에 따른 재화 지급 기능이 연결되어 있지 않습니다. Google Play에서 가격과 국가 정보를 조회하여 표시할 수 있으나 이 조회만으로 결제되거나 재화가 지급되지는 않습니다.",
               "게스트가 구매 메뉴를 이용하면 계정 연결을 권장하고 “계정 연동하기”, “게스트로 계속”, “취소”를 선택할 수 있습니다. “게스트로 계속”을 선택해도 현재는 준비 중 안내만 표시하며 결제나 재화 지급은 이루어지지 않습니다.",
-              "Android 버전은 AdMob 배너 광고와 광고 개인정보 선택 기능을 사용합니다. 현재 보상형 광고의 서버 검증을 준비 중이므로 광고 보상 지급은 비활성 상태입니다. 전면 광고는 표시하지 않으며 Web 버전에는 광고 SDK가 연결되어 있지 않습니다.",
+              "Android 버전은 AdMob 배너 광고와 광고 개인정보 선택 기능을 사용합니다. 선택형 보상 광고는 광고 SDK의 완료 통지를 받은 뒤 기기에 보상을 저장합니다. 이는 서버 검증이 아니며 기기 간 중복 지급이나 저장 변조를 방지하지 못합니다. 전면 광고는 표시하지 않으며 Web 버전에는 광고 SDK가 연결되어 있지 않습니다.",
               "Web과 Android 모두 네트워크 연결 없이 정상 전투의 다이아몬드 보상과 영구 강화 구매를 기기에 저장합니다. 계정 연결과 서버 백업에 성공하면 같은 계정의 다른 기기에서 저장된 진행을 불러올 수 있습니다. 진행 중 전투는 기기 전용이며 다른 기기에서 그대로 이어하지 않습니다.",
-              "다이아몬드 잔액, 영구 강화와 달성 정보는 일반 프로필에 포함하여 백업합니다. 기기와 계정 저장이 충돌하면 사용할 전체 진행을 직접 선택하며 잔액을 합산하지 않습니다. 계정 저장을 선택하면 현재 전투를 이어할 수 없습니다. 이 백업은 서버가 정상 플레이나 재화 획득을 검증했다는 뜻이 아닙니다. 이전 보관용 재화와 강화는 자동으로 합산하지 않습니다. 연결 또는 저장에 실패하면 미전송 진행이 남을 수 있으므로 저장 상태를 확인해 주세요. 실제 결제·구매 복원·광고 보상 지급은 제공하지 않습니다.",
+              "다이아몬드 잔액, 영구 강화와 달성 정보는 일반 프로필에 포함하여 백업합니다. 기기와 계정 저장이 충돌하면 사용할 전체 진행을 직접 선택하며 잔액을 합산하지 않습니다. 계정 저장을 선택하면 현재 전투를 이어할 수 없습니다. 이 백업은 서버가 정상 플레이나 재화 획득을 검증했다는 뜻이 아닙니다. 이전 보관용 재화와 강화는 자동으로 합산하지 않습니다. 연결 또는 저장에 실패하면 미전송 진행이 남을 수 있으므로 저장 상태를 확인해 주세요. 실제 결제·구매 복원은 제공하지 않습니다.",
               "향후 유료 기능을 제공할 경우 가격, 결제 조건 및 관련 법령에 따른 취소·환불 조건을 구매 전에 별도로 안내합니다. 이 약관은 향후 구매에 대한 동의를 미리 받는 것이 아닙니다."
             ]
           },
@@ -107,9 +107,9 @@
             "paragraphs": [
               "Diamonds and other game resources are virtual items for game functions, not cash or deposits. The current version has no live payments or purchase-based resource grants. It may display prices and country information queried from Google Play. Those queries do not charge you or grant resources.",
               "When guests use a purchase menu, the game recommends linking an account and offers “Link account”, “Continue as guest” and “Cancel”. Choosing “Continue as guest” currently only shows a coming-soon notice; it does not initiate payment or grant resources.",
-              "The Android version uses AdMob banner ads and advertising privacy choices. Server verification for rewarded ads is being prepared, so ad reward grants are currently disabled. No interstitial ads are shown, and no advertising SDK is integrated into the Web version.",
+              "The Android version uses AdMob banner ads and advertising privacy choices. Optional rewarded ads grant rewards to local storage after the advertising SDK reports completion. This is not server verification and does not prevent duplicate grants across devices or save tampering. No interstitial ads are shown, and no advertising SDK is integrated into the Web version.",
               "On both Web and Android, diamond rewards from normal battles and permanent upgrade purchases are saved on your device without requiring a network connection. After linking an account and successfully backing up, you can load saved progress on another device using the same account. A battle in progress stays on its device and cannot be resumed on another device.",
-              "Diamond balances, permanent upgrades and achievements are backed up as part of the general profile. If device and account saves conflict, you choose which whole profile to use; balances are not added together. Choosing the account save prevents resuming the current battle. This backup does not mean the server verified play or how resources were earned. Previously archived resources and upgrades are not automatically added. A connection or save failure may leave unsent progress, so check the save status. Real-money payments, purchase restoration and ad reward grants are not provided.",
+              "Diamond balances, permanent upgrades and achievements are backed up as part of the general profile. If device and account saves conflict, you choose which whole profile to use; balances are not added together. Choosing the account save prevents resuming the current battle. This backup does not mean the server verified play or how resources were earned. Previously archived resources and upgrades are not automatically added. A connection or save failure may leave unsent progress, so check the save status. Real-money payments and purchase restoration are not provided.",
               "If paid features are introduced, prices, payment terms and cancellation or refund terms under applicable law will be explained before purchase. These terms do not provide advance consent to future purchases."
             ]
           },
@@ -173,9 +173,9 @@
             "paragraphs": [
               "钻石等游戏资源是用于游戏功能的虚拟物品，不是现金或存款。当前版本尚未接入实际付款或购买后发放资源的功能。游戏可能显示从 Google Play 查询的价格和国家信息，但仅进行查询不会扣款或发放资源。",
               "游客使用购买菜单时，游戏会建议关联账号，并提供“关联账号”“以游客身份继续”和“取消”。当前选择“以游客身份继续”只会显示功能准备中的提示，不会发起付款或发放游戏资源。",
-              "Android 版本使用 AdMob 横幅广告及广告隐私选择功能。激励广告的服务器验证准备中，因此当前禁用广告奖励发放。不显示插页式广告，Web 版本也未集成广告 SDK。",
+              "Android 版本使用 AdMob 横幅广告及广告隐私选择功能。可选激励广告在广告 SDK 通知完成后将奖励保存到设备。这不是服务器验证，无法防止跨设备重复发放或存档篡改。不显示插页式广告，Web 版本也未集成广告 SDK。",
               "Web 和 Android 均可在无网络连接时将正常战斗的钻石奖励和永久强化购买保存在设备上。关联账号并成功备份后，可在其他设备使用同一账号读取保存的进度。进行中的战斗仅保留在本设备，无法在其他设备直接继续。",
-              "钻石余额、永久强化和达成信息作为普通档案的一部分备份。设备与账号存档冲突时，由您选择使用哪一份完整进度，余额不会相加。选择账号存档后无法继续当前战斗。备份不表示服务器验证了游戏过程或资源获取的正当性。旧版保管的资源和强化不会自动合并。连接或保存失败可能留下未上传的进度，请确认保存状态。目前不提供实际支付、购买恢复或广告奖励发放。",
+              "钻石余额、永久强化和达成信息作为普通档案的一部分备份。设备与账号存档冲突时，由您选择使用哪一份完整进度，余额不会相加。选择账号存档后无法继续当前战斗。备份不表示服务器验证了游戏过程或资源获取的正当性。旧版保管的资源和强化不会自动合并。连接或保存失败可能留下未上传的进度，请确认保存状态。目前不提供实际支付或购买恢复。",
               "如果今后推出付费功能，将在购买前另行说明价格、付款条件以及适用法律规定的取消和退款条件。本条款不构成您对今后购买的预先同意。"
             ]
           },
@@ -239,9 +239,9 @@
             "paragraphs": [
               "ダイヤモンドなどのゲーム内資源は、ゲームの機能に使う仮想アイテムであり、現金や預金ではありません。現在のバージョンには、実際の決済や購入に応じた資源の付与機能は組み込まれていません。Google Play から取得した価格や国の情報を表示する場合がありますが、その照会だけで課金や資源の付与は行われません。",
               "ゲストが購入メニューを利用すると、アカウント連携を勧め、「アカウント連携」「ゲストのまま続ける」「キャンセル」を選択できます。現在は「ゲストのまま続ける」を選んでも準備中の案内のみ表示し、決済やゲーム内通貨の付与は行いません。",
-              "Android 版では AdMob のバナー広告と広告のプライバシー選択機能を使用します。リワード広告のサーバー検証は準備中のため、現在は広告報酬の付与を無効にしています。インタースティシャル広告は表示せず、Web 版には広告 SDK を組み込んでいません。",
+              "Android 版では AdMob のバナー広告と広告のプライバシー選択機能を使用します。任意のリワード広告は、広告 SDK の完了通知後に報酬を端末へ保存します。これはサーバー検証ではなく、端末間の重複付与や保存データの改ざんを防ぐものではありません。インタースティシャル広告は表示せず、Web 版には広告 SDK を組み込んでいません。",
               "Web と Android のどちらも、ネットワーク接続なしで通常の戦闘のダイヤモンド報酬と永続強化の購入を端末に保存します。アカウント連携とバックアップに成功すると、同じアカウントで別の端末から保存済みの進行状況を読み込めます。進行中の戦闘は端末内だけに保存され、別の端末では再開できません。",
-              "ダイヤ残高、永続強化、達成情報は通常のプロフィールに含めてバックアップします。端末とアカウントのセーブが競合した場合は、使用する進行状況全体を選び、残高は合算しません。アカウントのセーブを選ぶと現在の戦闘は再開できません。このバックアップは、サーバーがプレイや通貨獲得の正当性を検証したことを意味しません。以前の保管用通貨と強化は自動で合算しません。接続や保存の失敗により未送信の進行が残る場合があるため、保存状態をご確認ください。実際の決済、購入の復元、広告報酬の付与は提供していません。",
+              "ダイヤ残高、永続強化、達成情報は通常のプロフィールに含めてバックアップします。端末とアカウントのセーブが競合した場合は、使用する進行状況全体を選び、残高は合算しません。アカウントのセーブを選ぶと現在の戦闘は再開できません。このバックアップは、サーバーがプレイや通貨獲得の正当性を検証したことを意味しません。以前の保管用通貨と強化は自動で合算しません。接続や保存の失敗により未送信の進行が残る場合があるため、保存状態をご確認ください。実際の決済、購入の復元は提供していません。",
               "今後、有料機能を提供する場合は、価格、決済条件、適用法令に基づく取消し・返金条件を購入前に別途案内します。本規約は将来の購入に対する事前の同意ではありません。"
             ]
           },
